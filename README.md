@@ -1,6 +1,6 @@
 # Awaken The Rhythm Within — Visual HQ
 
-A public, visual project board for AWTR 2026.
+A public, cinematic visual project board for AWTR 2026.
 
 ## Open the interactive dashboard
 
@@ -8,23 +8,22 @@ A public, visual project board for AWTR 2026.
 
 **Source file:** [`index.html`](./index.html)
 
-## What this is
+## Design direction
 
-This dashboard turns the AWTR working board into a simple visual command center for:
+The dashboard is designed for a visual founder/operator:
 
-- Today’s top actions
-- Tickets + revenue progress
-- Vendor/practitioner status lanes
-- Content shoot priorities
-- Experience zones
-- Decisions needed from Paris
-- This week’s milestones
+- Giant cinematic hero
+- Top-right interactive navigation
+- Central event title: **Awaken The Rhythm Within**
+- Central deadline: **July 18, 2026**
+- Clean Chief of Staff hierarchy
+- Simple operating sections for today, tickets, people, content, zones, decisions, and weekly milestones
 
 ## North Star
 
 > A playground for humans who miss feeling alive.
 
-The goal is not to overload the event with workshops. The goal is to design the emotional arc:
+The operational goal is to design the emotional arc:
 
 **Arrival → belonging → exploration → play → movement → connection → fire/closing → “I feel alive.”**
 
@@ -38,7 +37,3 @@ The goal is not to overload the event with workshops. The goal is to design the 
 - Previous ticket snapshot: 11 tickets sold / approx. $622.80 net
 - Confirmed vendor payment: Mushroom coffee vendor / $140 paid
 - Minimum production cash target: approx. $3,000
-
-## Notes
-
-This is a lightweight static dashboard. It is intentionally simple so Paris can open it quickly on mobile and use it as a daily HQ view.
