@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AWTR Visual HQ</title>
+  <meta name="description" content="Visual interactive project board for Awaken The Rhythm Within 2026." />
+  <style>
+    :root{
+      --sand:#f6efe2;
+      --paper:#fffaf1;
+      --paper-2:#efe4d2;
+      --ink:#18251d;
+      --muted:#6f705f;
+      --forest:#234333;
+      --moss:#6f7f4f;
+      --clay:#b96e4b;
+      --rose:#d7a089;
+      --gold:#c39a4a;
+      --red:#a94635;
+      --green:#456b4f;
+      --line:rgba(35,67,51,.18);
+      --shadow:0 18px 50px rgba(38, 49, 35, .10);
+      --radius:24px;
+      --radius-sm:16px;
+      --space: clamp(16px, 2.5vw, 28px);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(215,160,137,.30), transparent 32%),
+        radial-gradient(circle at 88% 12%, rgba(111,127,79,.22), transparent 28%),
+        linear-gradient(180deg, var(--sand), #f8f1e6 52%, #efe5d4);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.45;
+    }
+
+    a{color:inherit}
+    button, input{font:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--space)}
+
+    .hero{
+      position:relative;
+      padding:42px 0 24px;
+      overflow:hidden;
+    }
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:28px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+    .mark{
+      width:42px;height:42px;border-radius:50%;
+      background:linear-gradient(135deg,var(--forest),var(--moss));
+      display:grid;place-items:center;color:var(--paper);
+      box-shadow:0 10px 28px rgba(35,67,51,.20);
+    }
+    .meta{
+      color:var(--muted);
+      font-size:14px;
+      text-align:right;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1.35fr) minmax(290px, .65fr);
+      gap:22px;
+      align-items:stretch;
+    }
+    .hero-card{
+      background:rgba(255,250,241,.82);
+      border:1px solid var(--line);
+      border-radius:calc(var(--radius) + 8px);
+      padding:clamp(24px,4vw,46px);
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    h1{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:clamp(42px, 7vw, 88px);
+      line-height:.92;
+      letter-spacing:-.06em;
+      margin:0 0 20px;
+      text-wrap:balance;
+    }
+    .subtitle{
+      max-width:780px;
+      font-size:clamp(18px, 2.2vw, 24px);
+      color:#3d463a;
+      margin:0 0 24px;
+      text-wrap:pretty;
+    }
+    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .pill{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:9px 13px;
+      background:rgba(255,255,255,.42);
+      color:#394535;
+      font-size:14px;
+      white-space:nowrap;
+    }
+    .signal{
+      background:var(--forest); color:var(--paper);
+      display:flex;flex-direction:column;justify-content:space-between;
+      min-height:100%;
+    }
+    .signal small{color:rgba(255,250,241,.7);text-transform:uppercase;letter-spacing:.14em;font-size:12px}
+    .signal strong{display:block;font-family:Georgia,serif;font-size:36px;line-height:1;margin:10px 0}
+    .signal p{color:rgba(255,250,241,.82);margin:0}
+
+    .nav-shell{
+      position:sticky;top:0;z-index:10;
+      background:rgba(246,239,226,.84);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(14px);
+    }
+    .nav{display:flex;gap:8px;overflow:auto;padding:12px var(--space);max-width:var(--max);margin:0 auto;scrollbar-width:none}
+    .nav::-webkit-scrollbar{display:none}
+    .nav a,.filter-btn{
+      min-height:44px;
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,250,241,.7);
+      text-decoration:none;
+      color:#344031;
+      white-space:nowrap;
+      cursor:pointer;
+      transition:.18s ease;
+    }
+    .nav a:hover,.filter-btn:hover,.filter-btn.active{background:var(--forest);color:var(--paper);border-color:var(--forest)}
+
+    main{padding:28px 0 70px}
+    section{scroll-margin-top:82px;margin:0 0 28px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:0 0 14px}
+    .section-head h2{font-size:clamp(26px,3vw,42px);letter-spacing:-.04em;margin:0;font-family:Georgia,serif}
+    .section-head p{margin:4px 0 0;color:var(--muted);max-width:650px}
+
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.sidebar{grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr)}
+
+    .card{
+      background:rgba(255,250,241,.84);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 10px 34px rgba(38,49,35,.06);
+    }
+    .card.compact{padding:16px;border-radius:var(--radius-sm)}
+    .card h3{margin:0 0 12px;font-size:18px;letter-spacing:-.02em}
+    .card p{margin:0;color:var(--muted)}
+    .status{
+      display:inline-flex;align-items:center;gap:7px;
+      font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+      padding:7px 10px;border-radius:999px;margin-bottom:12px;
+      border:1px solid transparent;
+    }
+    .status.urgent{background:#f3ddd3;color:var(--red);border-color:rgba(169,70,53,.18)}
+    .status.revenue{background:#f1e2bf;color:#805d16;border-color:rgba(195,154,74,.22)}
+    .status.confirmed{background:#dfe8d8;color:var(--green);border-color:rgba(69,107,79,.18)}
+    .status.pending{background:#eadfd0;color:#6f5a36;border-color:rgba(111,90,54,.18)}
+    .status.decision{background:#e8d5cc;color:#7d3f2a;border-color:rgba(185,110,75,.22)}
+    .dot{width:8px;height:8px;border-radius:50%;background:currentColor;display:inline-block}
+
+    .today-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    .action{
+      display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start;
+      padding:13px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.38)
+    }
+    .num{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--forest);color:var(--paper);font-weight:800;font-size:13px}
+    .owner{font-size:12px;color:var(--muted);white-space:nowrap;padding-top:4px}
+
+    .money{
+      display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end;margin-bottom:14px;
+    }
+    .money .amount{font-size:clamp(34px,5vw,56px);font-weight:900;letter-spacing:-.06em;line-height:1;color:var(--forest)}
+    .money .target{color:var(--muted);text-align:right}
+    .bar{height:18px;background:#e6dac6;border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+    .bar span{display:block;height:100%;width:25.4%;background:linear-gradient(90deg,var(--moss),var(--forest));border-radius:999px}
+    .metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+    .metric{background:rgba(255,255,255,.42);border:1px solid var(--line);border-radius:16px;padding:12px}
+    .metric b{display:block;font-size:20px;letter-spacing:-.03em}.metric small{color:var(--muted)}
+
+    .filters{display:flex;gap:8px;overflow:auto;margin-bottom:14px;padding-bottom:2px;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}
+    .board{display:grid;grid-template-columns:repeat(4,minmax(230px,1fr));gap:14px;overflow:auto;padding-bottom:8px}
+    .lane{background:rgba(255,250,241,.55);border:1px solid var(--line);border-radius:22px;padding:12px;min-height:220px}
+    .lane-title{display:flex;align-items:center;justify-content:space-between;font-weight:900;margin:4px 4px 12px}.count{color:var(--muted);font-size:12px}
+    .mini-card{background:rgba(255,255,255,.58);border:1px solid var(--line);border-radius:16px;padding:13px;margin-bottom:10px;cursor:pointer;transition:.18s ease}
+    .mini-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(38,49,35,.08)}
+    .mini-card h4{margin:0 0 5px;font-size:15px}.mini-card p{font-size:13px;margin:0 0 8px;color:var(--muted)}
+    .tag{display:inline-flex;margin:2px 4px 2px 0;padding:5px 8px;border-radius:999px;background:#eee1cd;color:#574b3d;font-size:11px;font-weight:700}
+
+    .zones{display:grid;grid-template-columns:repeat(6, minmax(140px,1fr));gap:10px;overflow:auto;padding-bottom:8px}
+    .zone{min-height:150px;background:linear-gradient(180deg,rgba(255,250,241,.86),rgba(239,228,210,.78));border:1px solid var(--line);border-radius:22px;padding:15px;display:flex;flex-direction:column;justify-content:space-between}
+    .zone strong{font-family:Georgia,serif;font-size:20px;line-height:1.05}.zone small{color:var(--muted);margin-top:8px;display:block}
+
+    details{background:rgba(255,255,255,.38);border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin:10px 0}
+    summary{cursor:pointer;font-weight:800;min-height:32px;display:flex;align-items:center}
+    details ul{margin:10px 0 0;padding-left:20px;color:#4f5549}
+
+    .decision-list{display:grid;gap:10px}.decision-item{display:flex;gap:12px;align-items:start;background:#fbf4e7;border:1px solid var(--line);border-radius:16px;padding:13px}.decision-item input{width:19px;height:19px;margin-top:2px;accent-color:var(--forest)}
+    .decision-item label{cursor:pointer}.decision-item span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+
+    .milestone{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:start;padding:16px;border-bottom:1px solid var(--line)}
+    .milestone:last-child{border-bottom:none}.milestone b{color:var(--forest)}.milestone ul{margin:4px 0 0;padding-left:18px;color:#4e574b}
+
+    .footer{padding:28px 0;color:var(--muted);font-size:13px}
+    .hide{display:none !important}
+
+    @media (max-width: 900px){
+      .hero-grid,.grid.sidebar,.grid.cols-2,.grid.cols-3{grid-template-columns:1fr}
+      .board{grid-template-columns:repeat(4, 84vw)}
+      .zones{grid-template-columns:repeat(6, 70vw)}
+      .metric-row{grid-template-columns:1fr}
+      .topbar{align-items:flex-start}.meta{text-align:left}
+      .milestone{grid-template-columns:1fr}
+    }
+
+    @media (prefers-reduced-motion:no-preference){
+      .hero-card,.card,.lane{animation:rise .5s ease both}.hero-card:nth-child(2){animation-delay:.06s}
+      @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand"><div class="mark">AW</div><div>AWTR Visual HQ<br><span style="color:var(--muted);font-weight:600">Project board for Paris</span></div></div>
+        <div class="meta">Updated June 16, 2026<br>Event: July 18, 2026 · Schomberg</div>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-card">
+          <h1>A playground for humans who miss feeling alive.</h1>
+          <p class="subtitle">A simple visual command center for tickets, money, vendors, practitioners, content, decisions, and the guest experience arc.</p>
+          <div class="pill-row">
+            <span class="pill">111 humans on land</span><span class="pill">Tier 1 $65</span><span class="pill">Tier 2 $75</span><span class="pill">Break-even target $3,000</span><span class="pill">Content shoot June 18</span>
+          </div>
+        </div>
+        <div class="hero-card signal">
+          <div><small>North Star</small><strong>Feel alive.</strong><p>Do not add more workshops before the emotional arc is clear: arrival → belonging → exploration → play → movement → connection → fire.</p></div>
+          <div class="pill-row"><span class="pill" style="background:rgba(255,255,255,.12);color:var(--paper);border-color:rgba(255,255,255,.2)">Community is the product</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-shell" aria-label="Board sections"><div class="nav">
+    <a href="#today">Today</a><a href="#money">Tickets + Money</a><a href="#people">People Board</a><a href="#content">Content</a><a href="#zones">Zones</a><a href="#decisions">Decisions</a><a href="#milestones">Milestones</a>
+  </div></nav>
+
+  <main class="wrap">
+    <section id="today">
+      <div class="section-head"><div><h2>Today View</h2><p>The only actions that matter today. Everything else is background.</p></div></div>
+      <div class="grid sidebar">
+        <div class="card">
+          <span class="status urgent"><span class="dot"></span>Do first</span>
+          <ul class="today-list">
+            <li class="action"><span class="num">1</span><div><b>Pull current ticket count + revenue.</b><br><span style="color:var(--muted)">This unlocks capacity, urgency, and the production budget.</span></div><span class="owner">Paris</span></li>
+            <li class="action"><span class="num">2</span><div><b>Confirm June 18 content shoot details.</b><br><span style="color:var(--muted)">Time, location, attendees, wardrobe, props, Matt’s shot list.</span></div><span class="owner">Paris + Matt</span></li>
+            <li class="action"><span class="num">3</span><div><b>Clean practitioner/vendor confirmations.</b><br><span style="color:var(--muted)">Names, offerings, payment model, setup needs, social handles.</span></div><span class="owner">Paris / Team</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="status decision"><span class="dot"></span>Needs Paris</span>
+          <div class="decision-list" id="quickDecisions"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="money">
+      <div class="section-head"><div><h2>Tickets + Revenue</h2><p>Make the money situation visible. Known numbers are separated from what needs updating.</p></div></div>
+      <div class="grid cols-2">
+        <div class="card">
+          <span class="status revenue"><span class="dot"></span>Revenue progress</span>
+          <div class="money"><div><div class="amount">$762.80</div><p>known revenue: previous ticket snapshot + mushroom coffee vendor</p></div><div class="target"><b>$3,000</b><br>minimum cash target</div></div>
+          <div class="bar" aria-label="Revenue progress toward 3000"><span></span></div>
+          <div class="metric-row"><div class="metric"><b>25%</b><small>of target known</small></div><div class="metric"><b>$2,237.20</b><small>gap to target</small></div><div class="metric"><b>30–35</b><small>approx more tickets needed depending on tier/fees</small></div></div>
+        </div>
+        <div class="card">
+          <span class="status urgent"><span class="dot"></span>Ticket clarity needed</span>
+          <details open><summary>Update today</summary><ul><li>Current tickets sold</li><li>Current gross + net revenue</li><li>How many Tier 1 tickets remain</li><li>When Tier 2 begins</li><li>How many team/vendor/practitioner spots count inside 111</li><li>Actual remaining sellable capacity</li></ul></details>
+          <details><summary>Ticket CTA draft</summary><ul><li>Awaken is intentionally intimate — only 111 humans on the land.</li><li>Tier 1 is $65 before it moves to $75.</li><li>If you’ve been feeling the call to reconnect with nature, community, movement, music, and yourself, this is your sign.</li></ul></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="people">
+      <div class="section-head"><div><h2>People Board</h2><p>Use the filters to cut through the noise: confirmed, pending, payment, setup, or decisions.</p></div></div>
+      <div class="filters" role="toolbar" aria-label="People filters">
+        <button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="confirmed">Confirmed</button><button class="filter-btn" data-filter="pending">Pending</button><button class="filter-btn" data-filter="payment">Payment</button><button class="filter-btn" data-filter="setup">Setup info</button><button class="filter-btn" data-filter="decision">Decision needed</button>
+      </div>
+      <div class="board" id="peopleBoard"></div>
+    </section>
+
+    <section id="content">
+      <div class="section-head"><div><h2>Content Shoot Board</h2><p>June 18 should produce 2–3 weeks of sales and story assets.</p></div></div>
+      <div class="grid cols-3">
+        <div class="card"><span class="status urgent"><span class="dot"></span>Before shoot</span><h3>Prep checklist</h3><p>Confirm time, location, attendees, wardrobe, props, Matt’s role, and shot ownership.</p></div>
+        <div class="card"><span class="status confirmed"><span class="dot"></span>Creative angle</span><h3>Sell the feeling</h3><p>Not “a breathwork festival.” Lead with aliveness, play, belonging, nature, music, and connection.</p></div>
+        <div class="card"><span class="status revenue"><span class="dot"></span>Minimum output</span><h3>Asset targets</h3><p>3 reels, 10–15 story clips, 10 stills, 1 founder story, 1 ticket CTA, 1 BTS montage, 1 what-to-expect clip.</p></div>
+      </div>
+    </section>
+
+    <section id="zones">
+      <div class="section-head"><div><h2>Experience Zones</h2><p>Design the event spatially, not as a pile of workshops.</p></div></div>
+      <div class="zones" id="zoneStrip"></div>
+      <div class="grid cols-2" style="margin-top:16px">
+        <div class="card"><h3>Guest flow recommendation</h3><p><b>Check-in → Vendor Village → Main Event.</b> Vendor traffic depends on placement. Do not put vendors off to the side.</p></div>
+        <div class="card"><h3>Safety + comfort needs</h3><p>First aid, water station, rain plan, covered areas, washrooms, visible volunteers, parking / navigation support.</p></div>
+      </div>
+    </section>
+
+    <section id="decisions">
+      <div class="section-head"><div><h2>Decisions Needed</h2><p>These are the founder bottlenecks. Check them off as they become clear.</p></div></div>
+      <div class="card"><div class="decision-list" id="decisionList"></div></div>
+    </section>
+
+    <section id="milestones">
+      <div class="section-head"><div><h2>This Week’s Milestones</h2><p>The weekly operating rhythm: revenue, content, people, and production.</p></div></div>
+      <div class="card" style="padding:0" id="milestoneList"></div>
+    </section>
+
+    <footer class="footer">Built as a lightweight public GitHub Pages dashboard. Source board remains in README.md.</footer>
+  </main>
+
+  <script>
+    const people = [
+      {name:'Tiffany', lane:'Confirmed', role:'Yoga practitioner', need:'Setup needs + arrival time', tags:['confirmed','setup']},
+      {name:'Amy', lane:'Confirmed', role:'Sound circle / circle', need:'Exact session title + duration', tags:['confirmed','setup']},
+      {name:'Sam', lane:'Confirmed', role:'Breathwork / co-creator', need:'Final schedule placement', tags:['confirmed','setup']},
+      {name:'Paris', lane:'Confirmed', role:'Breathwork / lead', need:'Final schedule placement', tags:['confirmed']},
+      {name:'Rachel', lane:'Confirmed', role:'Cacao / opening ceremony', need:'Supplies + ritual design', tags:['confirmed','setup']},
+      {name:'Mushroom Coffee Vendor', lane:'Paid / Vendor', role:'Beverage vendor · $140 paid', need:'Correct spelling, social handle, setup + power', tags:['confirmed','payment','setup']},
+      {name:'Heal House', lane:'In-kind / Partner', role:'Biohacking / chill zone', need:'Equipment, footprint, staffing, power, arrival time', tags:['confirmed','setup']},
+      {name:'Mish', lane:'Needs Clarity', role:'Ceremony or biohacking support', need:'Exact role confirmation', tags:['pending','decision']},
+      {name:'Amanda', lane:'Needs Clarity', role:'Authentic relating or psychotherapy/psychiatry?', need:'Exact offering + payment model', tags:['pending','payment','decision']},
+      {name:'Shaw / SasaW', lane:'Needs Clarity', role:'Practitioner', need:'Correct spelling + exact offering', tags:['pending','decision']},
+      {name:'Sasha', lane:'Pending', role:'DJ at Vendor Village / possible spinal energetics', need:'Confirm DJ only, practitioner only, or both', tags:['pending','decision','setup']},
+      {name:'Linda', lane:'Pending', role:'Authentic relating / cord work?', need:'Confirm offering + status', tags:['pending','decision']},
+      {name:'Jen', lane:'Pending', role:'Potential practitioner', need:'Confirm interest + offering', tags:['pending']},
+      {name:'Fred', lane:'In-kind / Partner', role:'Biohacking booth host/support', need:'Confirm role + availability', tags:['pending','setup']},
+      {name:'PMF / PEMF / tuning fork', lane:'Needs Clarity', role:'Biohacking activation', need:'Confirm owner, equipment, setup', tags:['pending','decision','setup']}
+    ];
+    const lanes = ['Confirmed','Paid / Vendor','In-kind / Partner','Needs Clarity','Pending'];
+    const zones = [
+      ['Main Stage','Opening, movement, group experiences, closing'],['Breath & Body','Breathwork, yoga, somatics'],['Biohacking Village','PEMF, red light, grounding, longevity'],['Connection Lounge','Tea, rest, conversation, prompts'],['Vendor Village','Shopping, discovery, passport challenge'],['Bonfire Circle','Music, singing, reflection, closing']
+    ];
+    const decisions = [
+      ['When does Tier 1 close?', 'Needed for urgency + ticket copy.'],['What is the opening ritual object?', 'Flower, leaf, stone, intention card, or combo.'],['Who is waived vs paid?', 'Separate vendors, practitioners, partners, and in-kind value.'],['Is Sasha DJ only or also practitioner?', 'Affects schedule + setup.'],['Where does Vendor Village sit in guest flow?', 'Recommendation: check-in → vendors → main event.'],['What is the rain plan?', 'Canopies, covered zones, backup gathering area.']
+    ];
+    const milestones = [
+      ['Revenue',['Confirm ticket count + net revenue','Calculate gap to $3,000','Collect vendor payments / identify sponsor asks']],
+      ['Content',['Complete June 18 shoot','Create 2–3 weeks of assets','Use ticket CTA in every content push this week']],
+      ['People',['Clean confirmed vs pending list','Get setup needs + social handles','Decide who can be announced publicly']],
+      ['Production',['Start zone map','Build signage list','Assign first aid, water, rain, parking/check-in owners']]
+    ];
+
+    const board = document.getElementById('peopleBoard');
+    function renderBoard(filter='all'){
+      board.innerHTML = lanes.map(lane => {
+        const items = people.filter(p => p.lane === lane && (filter === 'all' || p.tags.includes(filter)));
+        return `<div class="lane"><div class="lane-title"><span>${lane}</span><span class="count">${items.length}</span></div>${items.map(p => `<article class="mini-card"><h4>${p.name}</h4><p>${p.role}</p><p><b>Need:</b> ${p.need}</p><div>${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></article>`).join('') || '<p style="padding:8px;color:var(--muted)">Nothing here for this filter.</p>'}</div>`;
+      }).join('');
+    }
+    document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderBoard(btn.dataset.filter)}));
+    renderBoard();
+
+    document.getElementById('zoneStrip').innerHTML = zones.map(([name, purpose]) => `<div class="zone"><div><strong>${name}</strong><small>${purpose}</small></div><span class="tag">needs map</span></div>`).join('');
+    function decisionHTML(list){ return list.map((d,i)=>`<div class="decision-item"><input id="d${i}" type="checkbox"><label for="d${i}"><b>${d[0]}</b><span>${d[1]}</span></label></div>`).join('') }
+    document.getElementById('decisionList').innerHTML = decisionHTML(decisions);
+    document.getElementById('quickDecisions').innerHTML = decisionHTML(decisions.slice(0,3));
+    document.getElementById('milestoneList').innerHTML = milestones.map(([name, items])=>`<div class="milestone"><b>${name}</b><div><ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul></div></div>`).join('');
+  </script>
+</body>
+</html>
