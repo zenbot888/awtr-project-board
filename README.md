@@ -40,4 +40,5 @@ The operational goal is to design the emotional arc:
 - June 18 shoot: inside Heal House using saved Instagram reference links as prompts; capture tuning fork, singing bowl, interview room, secret garden, sauna, massage table, and nearby park
 - Venue map: experience zones now use Paris's shared map; Forest Exploration Stage added for ~10-person picnic tables, tea ceremony, tarot readings, painting, journaling, and chill
 - Guest journey: dashboard now maps the 11 AM–10:30 PM guest experience and the logistics required at each touchpoint: gate, parking, check-in, Vendor Village, main field, forest stage, breathwork quiet protocol, food/integration, and optional night experience
+- UX upgrade: dashboard navigation shortened; Experience Flow now separates guest promise, phase map, zones, venue maps, guest-facing journey, and operator setup checklist
 - Minimum production cash target: approx. $3,000
