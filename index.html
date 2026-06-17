@@ -322,11 +322,12 @@
     .zones{display:grid;grid-template-columns:repeat(6,minmax(168px,1fr));gap:16px;overflow:auto}.zone{min-height:196px;border-radius:26px;border:1px solid var(--line);background:linear-gradient(180deg,#fff7ec,#eadcc8);padding:20px;display:flex;flex-direction:column;justify-content:space-between}.zone strong{font-family:Georgia,serif;font-size:23px;line-height:1.18;letter-spacing:-.02em}.zone small{display:block;margin-top:12px;color:var(--muted);line-height:1.48}
     .decision-list{display:grid;gap:16px}.decision{display:flex;gap:16px;align-items:start;border:1px solid var(--line);border-radius:20px;padding:18px;background:rgba(255,255,255,.42)}.decision input{width:22px;height:22px;accent-color:var(--forest);margin-top:2px}.decision label{cursor:pointer;line-height:1.35}.decision span{display:block;color:var(--muted);font-size:14px;margin-top:4px;line-height:1.5}
     .milestone{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:24px;border-bottom:1px solid var(--line)}.milestone:last-child{border-bottom:0}.milestone b{color:var(--forest)}.milestone ul{margin:2px 0 0;padding-left:20px;color:#4d5547;line-height:1.65}
+    .finance-sheet{overflow:auto;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.38)}.finance-row{display:grid;grid-template-columns:1.4fr .9fr .55fr .8fr .8fr .9fr .9fr;min-width:900px;border-bottom:1px solid var(--line)}.finance-row:last-child{border-bottom:0}.finance-row.header{background:#efe2cf;color:var(--forest);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:900}.finance-cell{padding:14px 16px;border-right:1px solid var(--line);font-size:13px;line-height:1.35}.finance-cell:last-child{border-right:0}.finance-cell.amount{font-weight:950;color:var(--forest)}.finance-total{display:flex;justify-content:space-between;gap:16px;margin-top:16px;padding:16px 18px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.52);font-weight:900}.reel-output-grid{display:grid;gap:18px;margin-top:18px}.reel-card{border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.42);padding:22px}.reel-top{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:18px}.reel-num{font-size:44px;line-height:1;font-weight:950;letter-spacing:-.05em;color:var(--forest)}.reel-pill{border-radius:999px;background:#dbe5e7;color:#324640;padding:8px 12px;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}.reel-section{border-top:1px solid var(--line);padding-top:14px;margin-top:14px}.reel-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:900;margin-bottom:8px}.reel-quote{font-size:18px;line-height:1.38;font-weight:850;color:#1c2824}.script-steps{display:grid;gap:10px;margin-top:12px}.script-step{display:grid;grid-template-columns:58px 1fr;gap:14px;align-items:center;border:1px solid var(--line);border-radius:18px;padding:12px;background:rgba(255,247,236,.62)}.script-step b{font-size:24px;line-height:1;color:var(--forest)}.script-step small{display:block;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:900;margin-top:5px}
     .revenue-chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-start;margin-top:16px}.revenue-chips .profit-chip{margin-top:12px}
     .footer{padding:36px 0 10px;color:var(--muted);font-size:13px}
 
     @media (max-width: 980px){
-      .nav-links{display:none}.menu-toggle{display:inline-flex}.logo{font-size:14px}.hero-center{padding-top:124px}.eyebrow{letter-spacing:.28em}.deadline-card{grid-template-columns:1fr;border-radius:28px}.countdown-wrap{grid-template-columns:repeat(3,1fr)}.deadline-card .date{width:100%;min-height:70px}.time-block{min-height:76px}.grid,.cols-2,.cols-3,.sidebar{grid-template-columns:1fr}.strip-card{grid-template-columns:1fr}.snapshot-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.board{grid-template-columns:repeat(5,84vw);overflow:auto;gap:14px}.zones{grid-template-columns:repeat(6,74vw)}.metrics{grid-template-columns:1fr}.action{grid-template-columns:auto minmax(0,1fr);grid-template-areas:'num body' 'num meta' 'done done'}.done-wrap{justify-self:start}.milestone{grid-template-columns:1fr}.sales-loop{grid-template-columns:1fr}.control-item{grid-template-columns:1fr;gap:4px}.hero-details{grid-template-columns:1fr}.mix-row{grid-template-columns:1fr;gap:6px}.owner-grid{grid-template-columns:1fr}.mission-grid{grid-template-columns:1fr}.weekly-mix{grid-template-columns:repeat(2,1fr)}main{padding:54px 0 116px}section{margin-bottom:132px;scroll-margin-top:150px}main > section.wrap{padding-top:34px}#today{padding-top:8px}main > section.wrap + section.wrap{margin-top:22px}.section-head{margin-bottom:34px}
+      .nav-links{display:none}.menu-toggle{display:inline-flex}.logo{font-size:14px}.hero-center{padding-top:124px}.eyebrow{letter-spacing:.28em}.deadline-card{grid-template-columns:1fr;border-radius:28px}.countdown-wrap{grid-template-columns:repeat(3,1fr)}.deadline-card .date{width:100%;min-height:70px}.time-block{min-height:76px}.grid,.cols-2,.cols-3,.sidebar{grid-template-columns:1fr}.strip-card{grid-template-columns:1fr}.snapshot-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.reel-top{flex-direction:column}.board{grid-template-columns:repeat(5,84vw);overflow:auto;gap:14px}.zones{grid-template-columns:repeat(6,74vw)}.metrics{grid-template-columns:1fr}.action{grid-template-columns:auto minmax(0,1fr);grid-template-areas:'num body' 'num meta' 'done done'}.done-wrap{justify-self:start}.milestone{grid-template-columns:1fr}.sales-loop{grid-template-columns:1fr}.control-item{grid-template-columns:1fr;gap:4px}.hero-details{grid-template-columns:1fr}.mix-row{grid-template-columns:1fr;gap:6px}.owner-grid{grid-template-columns:1fr}.mission-grid{grid-template-columns:1fr}.weekly-mix{grid-template-columns:repeat(2,1fr)}main{padding:54px 0 116px}section{margin-bottom:132px;scroll-margin-top:150px}main > section.wrap{padding-top:34px}#today{padding-top:8px}main > section.wrap + section.wrap{margin-top:22px}.section-head{margin-bottom:34px}
     }
   </style>
 </head>
@@ -447,23 +448,18 @@
     </section>
 
     <section id="expenses" class="wrap">
-      <div class="section-head"><div><div class="label">Cost control</div><h2>Expenses</h2><p>Track known costs and risk items.</p></div></div>
-      <div class="grid cols-2">
-        <div class="card">
-          <span class="status gold"><span class="dot"></span>Known / upcoming</span>
-          <div class="expense-list">
-            <div class="expense-row"><b>Boosted IG post — June 1</b><span>$67.80</span></div>
-            <div class="expense-row"><b>Extended email marketing 5,000</b><span>$41</span></div>
-            <div class="expense-row"><b>Poster printing</b><span>$7</span></div>
-            <div class="expense-row"><b>Porta-potties — two units</b><span>$220</span></div>
-            <div class="expense-row"><b>Total tracked</b><span>$335.80</span></div>
-          </div>
+      <div class="section-head"><div><div class="label">Cost control</div><h2>Expenses</h2><p>Excel-style view for paid, upcoming, and risk items. Add new rows here as costs come in.</p></div></div>
+      <div class="card">
+        <span class="status gold"><span class="dot"></span>Finance tracker</span>
+        <div class="finance-sheet" aria-label="Expense tracker table">
+          <div class="finance-row header"><div class="finance-cell">Item</div><div class="finance-cell">Category</div><div class="finance-cell">Qty</div><div class="finance-cell">Unit</div><div class="finance-cell">Total</div><div class="finance-cell">Status</div><div class="finance-cell">Owner / note</div></div>
+          <div class="finance-row"><div class="finance-cell">Boosted IG post — June 1</div><div class="finance-cell">Marketing</div><div class="finance-cell">1</div><div class="finance-cell">$67.80</div><div class="finance-cell amount">$67.80</div><div class="finance-cell">Paid/known</div><div class="finance-cell">Content push</div></div>
+          <div class="finance-row"><div class="finance-cell">Extended email marketing 5,000</div><div class="finance-cell">Marketing</div><div class="finance-cell">1</div><div class="finance-cell">$41</div><div class="finance-cell amount">$41</div><div class="finance-cell">Paid/known</div><div class="finance-cell">Email list</div></div>
+          <div class="finance-row"><div class="finance-cell">Poster printing</div><div class="finance-cell">Print</div><div class="finance-cell">1</div><div class="finance-cell">$7</div><div class="finance-cell amount">$7</div><div class="finance-cell">Paid/known</div><div class="finance-cell">Promo</div></div>
+          <div class="finance-row"><div class="finance-cell">Porta-potties</div><div class="finance-cell">Production</div><div class="finance-cell">2</div><div class="finance-cell">$220 each</div><div class="finance-cell amount">$440</div><div class="finance-cell">Upcoming</div><div class="finance-cell">Confirm service backup</div></div>
         </div>
-        <div class="card dark-card">
-          <span class="status dark"><span class="dot"></span>Expense risks</span>
-          <h3>Two practical issues need a plan.</h3>
-          <ul class="clean-list" style="color:rgba(255,247,236,.84)"><li>Porta-potty backup if one breaks.</li><li>Tick/insect prevention plan.</li><li>Guest + vendor comfort supplies.</li></ul>
-        </div>
+        <div class="finance-total"><span>Total tracked / upcoming</span><span>$555.80</span></div>
+        <div class="simple-note"><b>Risk notes:</b> porta-potty backup if one breaks; tick/insect prevention plan; guest + vendor comfort supplies.</div>
       </div>
     </section>
 
@@ -510,17 +506,31 @@
         </div>
       </div>
       <div class="card" style="margin-top:24px">
-        <span class="status red"><span class="dot"></span>Reference-inspired generator</span>
-        <h3>Pick a format. Film it fast.</h3>
-        <div class="simple-note"><b>Prompt:</b> Today I’m speaking to [audience] about [message]. The feeling is [alive / connected / playful / grounded]. The CTA is [buy ticket / save / share / DM].</div>
-        <div class="idea-list" style="margin-top:16px">
-          <div class="idea"><b>This is your sign</b><span>Hook: “This is your sign to spend one day in nature with people who also want real connection.” Format: B-roll + text. Mission: Attract.</span></div>
-          <div class="idea"><b>Healthy party</b><span>Hook: “Imagine a party where you leave lighter instead of drained.” Format: movement, music, friends, tea, smiles. Mission: Attract.</span></div>
-          <div class="idea"><b>Contrarian truth</b><span>Hook: “Somewhere along the way, we started calling disconnection normal.” Format: talking head. Mission: Position.</span></div>
-          <div class="idea"><b>Come solo</b><span>Hook: “Come solo or bring a friend — the whole point is connection.” Format: direct invite + soft venue shots. Mission: Convert.</span></div>
-          <div class="idea"><b>Comment AWAKEN</b><span>Hook: “Comment AWAKEN and I’ll send you the July 18 ticket link.” Format: direct talking head. Mission: Convert.</span></div>
-          <div class="idea"><b>BTS founder build</b><span>Hook: “The honest BTS of building a wellness festival in 30 days.” Format: messy planning clips, team call, checklist. Mission: Nurture.</span></div>
-          <div class="idea"><b>Micro-practice</b><span>Hook: “Try this if you feel disconnected from your body.” Format: 30-second breath/grounding practice. Mission: Position.</span></div>
+        <span class="status red"><span class="dot"></span>Content to cash style</span>
+        <h3>Pick mission → get reel structure.</h3>
+        <div class="simple-note"><b>Workflow:</b> choose Attract / Nurture / Position / Convert → pick a concept → film the hook, 3-part script, and CTA.</div>
+        <div class="reel-output-grid">
+          <article class="reel-card">
+            <div class="reel-top"><div><div class="reel-num">01</div><span class="reel-pill">Position</span></div><h3>Insider truth people won’t hear anywhere else</h3></div>
+            <div class="reel-section"><div class="reel-label">On screen as text</div><div class="reel-quote">“Nobody warned me how disconnected adulthood could feel.”</div></div>
+            <div class="reel-section"><div class="reel-label">Say out loud</div><p>“Somewhere along the way, we started calling rushing, numbing, and living outside our bodies normal.”</p></div>
+            <div class="reel-section"><div class="reel-label">How to film it</div><p>Direct address. Quiet space. Slightly serious. Use forest or planning B-roll inserts.</p></div>
+            <div class="script-steps"><div class="script-step"><div><b>01</b><small>Problem</small></div><span>Name the lie: disconnection is not normal.</span></div><div class="script-step"><div><b>02</b><small>Pursuit</small></div><span>Your evidence: Dubai, Toronto, events, dance floors, breathwork, strangers becoming friends.</span></div><div class="script-step"><div><b>03</b><small>Payoff</small></div><span>Invite them to Awaken: one day to feel human again.</span></div></div>
+          </article>
+          <article class="reel-card">
+            <div class="reel-top"><div><div class="reel-num">02</div><span class="reel-pill">Attract</span></div><h3>A note to the person craving real community</h3></div>
+            <div class="reel-section"><div class="reel-label">On screen as text</div><div class="reel-quote">“If you’re tired of only meeting people through screens…”</div></div>
+            <div class="reel-section"><div class="reel-label">Say out loud</div><p>“This is your sign to spend one day in nature with people who also want something real.”</p></div>
+            <div class="reel-section"><div class="reel-label">How to film it</div><p>B-roll: walking outside, tea, music, venue, friends laughing, notebook planning.</p></div>
+            <div class="script-steps"><div class="script-step"><div><b>01</b><small>Problem</small></div><span>People are lonely but busy.</span></div><div class="script-step"><div><b>02</b><small>Pursuit</small></div><span>Show the field: music, breath, forest, tea, movement, play.</span></div><div class="script-step"><div><b>03</b><small>Payoff</small></div><span>Come solo or bring a friend. July 18 near Toronto.</span></div></div>
+          </article>
+          <article class="reel-card">
+            <div class="reel-top"><div><div class="reel-num">03</div><span class="reel-pill">Convert</span></div><h3>Direct ticket invitation</h3></div>
+            <div class="reel-section"><div class="reel-label">On screen as text</div><div class="reel-quote">“Comment AWAKEN for the July 18 ticket link.”</div></div>
+            <div class="reel-section"><div class="reel-label">Say out loud</div><p>“If you’ve been craving nature, music, breathwork, tea, movement, and real connection, this is your invite.”</p></div>
+            <div class="reel-section"><div class="reel-label">How to film it</div><p>Talking head. Warm, clear, direct. Add venue clips and countdown overlay.</p></div>
+            <div class="script-steps"><div class="script-step"><div><b>01</b><small>Problem</small></div><span>You need a real reset, not another noisy weekend.</span></div><div class="script-step"><div><b>02</b><small>Pursuit</small></div><span>Explain what they get: forest, music, breathwork, connection, biohacking, vendors.</span></div><div class="script-step"><div><b>03</b><small>Payoff</small></div><span>CTA: comment AWAKEN or buy before the next ticket target.</span></div></div>
+          </article>
         </div>
       </div>
     </section>
@@ -549,7 +559,7 @@
       </div>
       <div class="grid cols-2" style="margin-top:24px">
         <div class="card"><span class="status red"><span class="dot"></span>Rain backup</span><h3>Warehouse use must be confirmed.</h3><ul class="clean-list"><li>Sam confirms warehouse with Danielle.</li><li>Canopies: one 30×10 + one 10×10.</li><li>Breathwork/yoga/sound still need cover.</li></ul></div>
-        <div class="card"><span class="status gold"><span class="dot"></span>Known expenses</span><h3>$335.80 currently known / upcoming.</h3><ul class="clean-list"><li>Tracked: $335.80.</li><li>Porta-potties: $220 for two.</li><li>Plan backup + tick mitigation.</li></ul></div>
+        <div class="card"><span class="status gold"><span class="dot"></span>Known expenses</span><h3>$555.80 currently known / upcoming.</h3><ul class="clean-list"><li>Tracked: $555.80.</li><li>Porta-potties: $220 each × 2 = $440.</li><li>Plan backup + tick mitigation.</li></ul></div>
       </div>
     </section>
 
