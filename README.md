@@ -37,4 +37,5 @@ The operational goal is to design the emotional arc:
 - Current ticket snapshot: 11 tickets sold / approx. $632.80 net
 - Confirmed vendor payment: Strovoris mushroom coffee / matcha vendor / $140 paid
 - Latest people pipeline: Moriah + Vivik tarot leads, Freshouse Juice Bar outreach, Flojo yerba maté drink, Amanita Haus follow-up, Heal House/Fred PEMF under biohacking activation
+- June 18 shoot: inside Heal House using saved Instagram reference links as prompts; capture tuning fork, singing bowl, interview room, secret garden, sauna, massage table, and nearby park
 - Minimum production cash target: approx. $3,000
