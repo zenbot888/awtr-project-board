@@ -286,6 +286,7 @@
     }
     .dark-card{background:var(--forest);color:var(--paper);border-color:rgba(255,255,255,.1)}
     .card h3{margin:0 0 16px;font-size:22px;letter-spacing:-.015em;line-height:1.22}.card p{margin:0;color:var(--muted);line-height:1.62}.dark-card p{color:rgba(255,247,236,.78)}
+    .sales-loop{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:18px}.loop-step{border:1px solid var(--line);border-radius:20px;padding:16px;background:rgba(255,255,255,.42);text-align:center}.loop-step b{display:block;font-size:14px;line-height:1.2}.loop-step small{display:block;margin-top:6px;color:var(--muted);line-height:1.35}.control-list{display:grid;gap:12px}.control-item{display:grid;grid-template-columns:150px 1fr;gap:14px;border-bottom:1px solid var(--line);padding:0 0 12px}.control-item:last-child{border-bottom:0;padding-bottom:0}.control-item b{color:var(--forest)}.control-item span{color:var(--muted)}
     .status{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 12px;margin-bottom:18px;font-size:11px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;background:#ead9c2;color:#6f4a2e}.status.red{background:#f0d5ca;color:#9a3d2e}.status.green{background:#dfe8d6;color:#355f3c}.status.gold{background:#efdfb8;color:#73530f}.status.dark{background:rgba(255,255,255,.12);color:var(--paper)}.dot{width:8px;height:8px;border-radius:50%;background:currentColor}
 
     .command-strip{margin-top:-44px;margin-bottom:74px;position:relative;z-index:4}.strip-card{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;background:rgba(255,247,236,.94);border:1px solid var(--line);border-radius:32px;padding:26px 30px;box-shadow:0 30px 90px rgba(0,0,0,.14);backdrop-filter:blur(16px)}
@@ -303,7 +304,7 @@
     .footer{padding:36px 0 10px;color:var(--muted);font-size:13px}
 
     @media (max-width: 980px){
-      .nav-links{display:none}.menu-toggle{display:inline-flex}.logo{font-size:14px}.hero-center{padding-top:124px}.eyebrow{letter-spacing:.28em}.deadline-card{grid-template-columns:1fr;border-radius:28px}.countdown-wrap{grid-template-columns:repeat(3,1fr)}.deadline-card .date{width:100%;min-height:70px}.time-block{min-height:76px}.grid,.cols-2,.cols-3,.sidebar{grid-template-columns:1fr}.strip-card{grid-template-columns:1fr}.strip-actions{justify-content:flex-start}.board{grid-template-columns:repeat(5,84vw);overflow:auto;gap:14px}.zones{grid-template-columns:repeat(6,74vw)}.metrics{grid-template-columns:1fr}.action{grid-template-columns:auto 1fr}.owner{grid-column:2}.milestone{grid-template-columns:1fr}main{padding:88px 0 116px}section{margin-bottom:132px;scroll-margin-top:150px}main > section.wrap{padding-top:34px}main > section.wrap + section.wrap{margin-top:22px}.section-head{margin-bottom:34px}
+      .nav-links{display:none}.menu-toggle{display:inline-flex}.logo{font-size:14px}.hero-center{padding-top:124px}.eyebrow{letter-spacing:.28em}.deadline-card{grid-template-columns:1fr;border-radius:28px}.countdown-wrap{grid-template-columns:repeat(3,1fr)}.deadline-card .date{width:100%;min-height:70px}.time-block{min-height:76px}.grid,.cols-2,.cols-3,.sidebar{grid-template-columns:1fr}.strip-card{grid-template-columns:1fr}.strip-actions{justify-content:flex-start}.board{grid-template-columns:repeat(5,84vw);overflow:auto;gap:14px}.zones{grid-template-columns:repeat(6,74vw)}.metrics{grid-template-columns:1fr}.action{grid-template-columns:auto 1fr}.owner{grid-column:2}.milestone{grid-template-columns:1fr}.sales-loop{grid-template-columns:1fr}.control-item{grid-template-columns:1fr;gap:4px}main{padding:88px 0 116px}section{margin-bottom:132px;scroll-margin-top:150px}main > section.wrap{padding-top:34px}main > section.wrap + section.wrap{margin-top:22px}.section-head{margin-bottom:34px}
     }
   </style>
 </head>
@@ -312,13 +313,13 @@
     <div class="nav-inner">
       <a class="logo" href="#top">AWTR HQ</a>
       <nav class="nav-links" id="desktopNav">
-        <a href="#today">Today</a><a href="#money">Tickets</a><a href="#people">People</a><a href="#content">Content</a><a href="#zones">Zones</a><a href="#decisions">Decisions</a><a href="#milestones">Milestones</a>
+        <a href="#today">Today</a><a href="#money">Tickets</a><a href="#sales">Sales</a><a href="#people">People</a><a href="#content">Content</a><a href="#zones">Zones</a><a href="#decisions">Decisions</a><a href="#milestones">Milestones</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
     </div>
   </header>
   <nav class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
-    <a href="#today">Today</a><a href="#money">Tickets + Money</a><a href="#people">People Board</a><a href="#content">Content Shoot</a><a href="#zones">Experience Zones</a><a href="#decisions">Decisions</a><a href="#milestones">Milestones</a>
+    <a href="#today">Today</a><a href="#money">Tickets + Money</a><a href="#sales">Sales Engine</a><a href="#people">People Board</a><a href="#content">Content Shoot</a><a href="#zones">Experience Zones</a><a href="#decisions">Decisions</a><a href="#milestones">Milestones</a>
   </nav>
 
   <section class="hero" id="top">
@@ -344,7 +345,7 @@
   <main>
     <div class="wrap command-strip">
       <div class="strip-card">
-        <div><div class="strip-title">Chief of Staff Snapshot</div><div class="strip-text">Your operating focus: ticket clarity, June 18 content shoot, vendor/practitioner cleanup, and experience design.</div></div>
+        <div><div class="strip-title">Chief of Staff Snapshot</div><div class="strip-text">Your operating focus: ticket clarity, weekly sales targets, founder-led content, sponsor calls, vendor/practitioner cleanup, and experience design.</div></div>
         <div class="strip-actions"><span class="chip">111 capacity</span><span class="chip">Tier 1 $65</span><span class="chip">Target $3,000</span><span class="chip">Shoot June 18</span></div>
       </div>
     </div>
@@ -382,6 +383,45 @@
           <h3>Ticket situation must be clarified now.</h3>
           <p>Confirm current tickets sold, net revenue, Tier 1 remaining, Tier 2 switch date, comp/team count inside 111, and sellable capacity.</p>
           <div class="strip-actions" style="justify-content:flex-start;margin-top:16px"><span class="chip">Tier 1 $65</span><span class="chip">Tier 2 $75</span><span class="chip">111 total humans</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sales" class="wrap">
+      <div class="section-head"><div><div class="label">Sales engine</div><h2>Sell the world, not the workshop</h2><p>From the workshop: people buy feelings, not activities. Awaken needs repeated hype, proof, urgency, and clear conversion moments.</p></div></div>
+      <div class="grid cols-2">
+        <div class="card dark-card">
+          <span class="status dark"><span class="dot"></span>No sugar coating</span>
+          <h3>Posters alone will not sell this.</h3>
+          <p>Generic wellness language makes Awaken replaceable. The sales system needs founder-led storytelling, social proof, repeated urgency, warm DMs, email/community pushes, and sponsor calls.</p>
+        </div>
+        <div class="card">
+          <span class="status gold"><span class="dot"></span>Hype-to-sales loop</span>
+          <h3>Repeat this loop weekly.</h3>
+          <div class="sales-loop">
+            <div class="loop-step"><b>Tease</b><small>show the world</small></div>
+            <div class="loop-step"><b>Sell</b><small>clear CTA</small></div>
+            <div class="loop-step"><b>Proof</b><small>faces + clips</small></div>
+            <div class="loop-step"><b>Urgency</b><small>tier + capacity</small></div>
+            <div class="loop-step"><b>Capture</b><small>waitlist + email</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid cols-2" style="margin-top:24px">
+        <div class="card">
+          <span class="status red"><span class="dot"></span>Ticket control board</span>
+          <div class="control-list">
+            <div class="control-item"><b>Weekly target</b><span>How many tickets should be sold by this week?</span></div>
+            <div class="control-item"><b>Actual sold</b><span>What is the real ticket number today?</span></div>
+            <div class="control-item"><b>Gap</b><span>Are we ahead or behind?</span></div>
+            <div class="control-item"><b>Top content</b><span>What should we repeat?</span></div>
+            <div class="control-item"><b>Conversion push</b><span>Deadline, referral, DM outreach, email, sponsor/community partner.</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <span class="status green"><span class="dot"></span>Content pillars</span>
+          <h3>Use these to sell the feeling.</h3>
+          <p><b>Founder story</b> builds trust. <b>World-building</b> makes it real. <b>Transformation</b> sells the outcome. <b>Social proof</b> reduces doubt. <b>Urgency</b> drives action.</p>
         </div>
       </div>
     </section>
