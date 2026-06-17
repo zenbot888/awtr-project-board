@@ -41,4 +41,6 @@ The operational goal is to design the emotional arc:
 - Venue map: experience zones now use Paris's shared map; Forest Exploration Stage added for ~10-person picnic tables, tea ceremony, tarot readings, painting, journaling, and chill
 - Guest journey: dashboard now maps the 11 AM–10:30 PM guest experience and the logistics required at each touchpoint: gate, parking, check-in, Vendor Village, main field, forest stage, breathwork quiet protocol, food/integration, and optional night experience
 - UX upgrade: dashboard navigation shortened; Experience Flow now separates guest promise, phase map, zones, venue maps, guest-facing journey, and operator setup checklist
+- Decisions updated around schedule, gate/no-entry protocol, zone owners, wayfinding, Forest Exploration host, breathwork quiet protocol, rain/safety, vendor/practitioner model, optional night boundaries, and ticket urgency
+- Member project board added for Paris, Sam, Rachel, Matt, Vendors + Partners, Practitioners, and Volunteer / Day-of Team with Doing Now, Waiting On, and Next Move lanes
 - Minimum production cash target: approx. $3,000
