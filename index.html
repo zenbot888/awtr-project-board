@@ -453,9 +453,9 @@
         <span class="status gold"><span class="dot"></span>Finance tracker</span>
         <div class="finance-sheet" aria-label="Expense tracker table">
           <div class="finance-row header"><div class="finance-cell">Item</div><div class="finance-cell">Category</div><div class="finance-cell">Qty</div><div class="finance-cell">Unit</div><div class="finance-cell">Total</div><div class="finance-cell">Status</div><div class="finance-cell">Owner / note</div></div>
-          <div class="finance-row"><div class="finance-cell">Boosted IG post — June 1</div><div class="finance-cell">Marketing</div><div class="finance-cell">1</div><div class="finance-cell">$67.80</div><div class="finance-cell amount">$67.80</div><div class="finance-cell">Paid/known</div><div class="finance-cell">Content push</div></div>
-          <div class="finance-row"><div class="finance-cell">Extended email marketing 5,000</div><div class="finance-cell">Marketing</div><div class="finance-cell">1</div><div class="finance-cell">$41</div><div class="finance-cell amount">$41</div><div class="finance-cell">Paid/known</div><div class="finance-cell">Email list</div></div>
-          <div class="finance-row"><div class="finance-cell">Poster printing</div><div class="finance-cell">Print</div><div class="finance-cell">1</div><div class="finance-cell">$7</div><div class="finance-cell amount">$7</div><div class="finance-cell">Paid/known</div><div class="finance-cell">Promo</div></div>
+          <div class="finance-row"><div class="finance-cell">Boosted IG post — June 1</div><div class="finance-cell">Marketing</div><div class="finance-cell">1</div><div class="finance-cell">$67.80</div><div class="finance-cell amount">$67.80</div><div class="finance-cell">Paid/known</div><div class="finance-cell">Paid by Sam</div></div>
+          <div class="finance-row"><div class="finance-cell">Extended email marketing 5,000</div><div class="finance-cell">Marketing</div><div class="finance-cell">1</div><div class="finance-cell">$41</div><div class="finance-cell amount">$41</div><div class="finance-cell">Paid/known</div><div class="finance-cell">Paid by Sam</div></div>
+          <div class="finance-row"><div class="finance-cell">Poster printing</div><div class="finance-cell">Print</div><div class="finance-cell">1</div><div class="finance-cell">$7</div><div class="finance-cell amount">$7</div><div class="finance-cell">Paid/known</div><div class="finance-cell">Paid by Paris</div></div>
           <div class="finance-row"><div class="finance-cell">Porta-potties</div><div class="finance-cell">Production</div><div class="finance-cell">2</div><div class="finance-cell">$220 each</div><div class="finance-cell amount">$440</div><div class="finance-cell">Upcoming</div><div class="finance-cell">Confirm service backup</div></div>
         </div>
         <div class="finance-total"><span>Total tracked / upcoming</span><span>$555.80</span></div>
@@ -644,18 +644,30 @@
     renderTodayActions();
 
     const people = [
-      {name:'Amy', lane:'Confirmed', role:'Sound circle lead', need:'Confirm session title, timing, setup, and announcement bio', tags:['confirmed','setup']},
-      {name:'Shaw', lane:'Confirmed', role:'DJ for Vendor Village', need:'Confirm set time, sound needs, arrival time, and social handle', tags:['confirmed','setup']},
-      {name:'Sam', lane:'Confirmed', role:'Breathwork facilitator', need:'Confirm breathwork timing + support needs', tags:['confirmed','setup']},
-      {name:'Paris', lane:'Confirmed', role:'Breathwork lead / founder', need:'Confirm founder speaking moments + ticket CTA content', tags:['confirmed']},
-      {name:'Rachel', lane:'Confirmed', role:'Opening circle + cacao', need:'Confirm ritual flow, cacao supplies, and setup', tags:['confirmed','setup']},
+      {name:'Amy', lane:'Confirmed', role:'Sound circle lead', need:'Confirm session title, timing, setup file, announcement bio, and profile', tags:['confirmed','setup']},
+      {name:'Shaw', lane:'Confirmed', role:'Vendor Village DJ', need:'Confirm set time, sound setup, setup file, profile, arrival, and social handle', tags:['confirmed','setup']},
+      {name:'Sam', lane:'Confirmed', role:'Breathwork facilitator / co-founder', need:'Align with Paris on co-facilitation, meditation elements, timing, and evening breathwork flow', tags:['confirmed','setup']},
+      {name:'Paris', lane:'Confirmed', role:'Founder / breathwork / forest exploration / second stage', need:'Collaborate with Sam on breathwork + meditation; identify evening event role and forest exploration flow', tags:['confirmed','setup']},
+      {name:'Rachel', lane:'Confirmed', role:'Opening circle + sound healing', need:'Confirm opening flow, sound-healing role, supplies, timing, and setup', tags:['confirmed','setup']},
       {name:'Meesh', lane:'Confirmed', role:'Opening circle + sound healing', need:'Confirm role split with Rachel and sound setup', tags:['confirmed','setup']},
-      {name:'Tiffany', lane:'Confirmed', role:'Yoga practitioner', need:'Confirm yoga timing, mats/blankets, and arrival time', tags:['confirmed','setup']},
-      {name:'Strovoris', lane:'Paid / Vendor', role:'Mushroom coffee / matcha beverage vendor', need:'Paid $100 vendor fee + $40 electricity. Confirm power location, table, and social handle', tags:['confirmed','payment','setup']},
+      {name:'Tiffany', lane:'Confirmed', role:'Yoga practitioner', need:'Confirm yoga lens, preparation needed, timing, mats/blankets, and arrival time', tags:['confirmed','setup']},
+      {name:'Amanda', lane:'Confirmed', role:'Authentic relating + dance academy', need:'Explore synergy with opening ceremony; if not, place dance academy during daytime/yoga-adjacent programming', tags:['confirmed','setup','decision']},
+      {name:'Strovoris', lane:'Paid / Vendor', role:'Mushroom coffee / matcha beverage vendor', need:'Paid $100 vendor fee + $40 electricity. Sam received vendor agreement. Confirm power location, table, and social handle', tags:['confirmed','payment','setup']},
       {name:'Heal House', lane:'In-kind / Sponsor', role:'Biohacking sponsor: PEMF/PMF, red light therapy, foot massage', need:'Confirm equipment, footprint, power, staff count, signage, and guest flow', tags:['confirmed','setup']},
-      {name:'Amanda', lane:'Confirmed', role:'Authentic relating + dance academy', need:'Confirm session title, timing, setup, content requirements, and announcement bio', tags:['confirmed','setup']},
+      {name:'Talisa / Picnic by the Event', lane:'In-kind / Sponsor', role:'Picnic table setup for forest tea ceremony / forest exploration', need:'Confirm booth, forest setup footprint, timing, furniture, and install/strike needs', tags:['confirmed','setup']},
+      {name:'Rosa / Osa', lane:'Pending', role:'Potential tea ceremony + forest exploration practitioner', need:'Send action/confirmation message and confirm offering, timing, and setup needs', tags:['pending','setup']},
+      {name:'Mariah', lane:'Pending', role:'Tarot vendor', need:'Confirm vendor model, fee, setup, and whether tarot belongs in forest exploration or Vendor Village', tags:['pending','payment','setup']},
+      {name:'Sasha', lane:'Pending', role:'Potential practitioner + tarot vendor', need:'Discuss workshop in forest session and tarot vendor option; confirm if willing to pay $50 vendor fee', tags:['pending','payment','setup','decision']},
       {name:'Jen', lane:'Pending', role:'Potential practitioner', need:'Confirm interest + offering', tags:['pending']},
-      {name:'Evening Experience', lane:'Needs Clarity', role:'Music / social / party vibe decision', need:'Decide whether AWTR extends into nighttime music energy', tags:['decision','setup']},
+      {name:'Atarodo / J.O.', lane:'Pending', role:'Beverage / functional yoga-mate drink', need:'Paris owns warm lead; send outreach and confirm product, fee, power, and sampling needs', tags:['pending','payment','setup']},
+      {name:'Eli’s Table', lane:'Pending', role:'Lebanese food / catering prospect', need:'Sam owns; waiting to receive catering menu and pricing', tags:['pending','setup']},
+      {name:'Super Patch', lane:'Pending', role:'Natural supplement patch vendor', need:'Sam owns warm lead; confirm interest, fee, and activation format', tags:['pending','payment','setup']},
+      {name:'French School / mushroom + clothing / crystals', lane:'Pending', role:'Vendor options from Paris network', need:'Send Instagram DMs about Awaken and confirm fit: functional mushrooms, clothing, crystals', tags:['pending','payment']},
+      {name:'Toronto Island Wellness / Longevity Wellness Expo / Starseed Academy', lane:'Pending', role:'Vendor/community leads', need:'Reach out and qualify fit for wellness, vendors, or community cross-promotion', tags:['pending']},
+      {name:'Multi Pasta / Fabulous Pasta / Impact Kitchen', lane:'Pending', role:'Food vendor prospects', need:'Reach out for food/catering or community food partner options', tags:['pending','setup']},
+      {name:'Ridge', lane:'Pending', role:'Sound circle lead + potential evening bass set', need:'Confirm if available for sound circle and possible nighttime/evening bass set', tags:['pending','setup']},
+      {name:'Zoom Garden / Airagsbs / Herzog Grip / AMHARE Canada / Village Juicery / Snowing Ceramics / Blue Bear Ume / Bekpekin', lane:'Pending', role:'Vendor outreach list', need:'Clean names + Instagram handles, then send outreach for vendor, drink, ceramic, or product fit', tags:['pending','payment']},
+      {name:'Evening Experience', lane:'Needs Clarity', role:'Music / social / party vibe decision', need:'Decide nighttime flow, stage/booth location facing forest, music timing, lights, smoke, and sound limits', tags:['decision','setup']},
       {name:'Rain Plan', lane:'Needs Clarity', role:'Operations backup', need:'Decide covered areas, schedule shift, guest communication, and vendor/practitioner protection', tags:['decision','setup']},
       {name:'Tick / insect solution', lane:'Needs Clarity', role:'Guest comfort + vendor safety', need:'Create prevention plan, supplies list, and guest/vendor communication', tags:['decision','setup']}
     ];
@@ -681,7 +693,7 @@
       ['Decide cover solution for breathwork/yoga/sound','Current canopies cover Vendor Village only; main outdoor programming still needs protection.'],
       ['Finalize evening experience details','Direction: soft grounding close + optional outdoor evening social/dance at Vendor Village with music, lights, and smoke machines. Confirm end time and sound rules.'],
       ['Create tick/insect mitigation plan','Guests/vendors need prevention guidance, site treatment if appropriate, and comfort supplies.'],
-      ['Confirm porta-potty risk plan','Two units planned at $220; decide what happens if one breaks or needs service.']
+      ['Confirm porta-potty risk plan','Two units planned at $220 each; decide what happens if one breaks or needs service.']
     ];
     document.getElementById('decisionList').innerHTML = decisions.map((d,i)=>`<div class="decision"><input id="d${i}" type="checkbox"><label for="d${i}"><b>${d[0]}</b><span>${d[1]}</span></label></div>`).join('');
 
