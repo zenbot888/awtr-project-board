@@ -34,6 +34,7 @@ The operational goal is to design the emotional arc:
 - Capacity: 111 humans on land
 - Tier 1: $65
 - Tier 2: $75
-- Previous ticket snapshot: 11 tickets sold / approx. $622.80 net
-- Confirmed vendor payment: Mushroom coffee vendor / $140 paid
+- Current ticket snapshot: 11 tickets sold / approx. $632.80 net
+- Confirmed vendor payment: Strovoris mushroom coffee / matcha vendor / $140 paid
+- Latest people pipeline: Moriah + Vivik tarot leads, Freshouse Juice Bar outreach, Flojo yerba maté drink, Amanita Haus follow-up, Heal House/Fred PEMF under biohacking activation
 - Minimum production cash target: approx. $3,000
