@@ -19,7 +19,7 @@
       --amber:#d6a85a;
       --rose:#b85442;
       --deep:#152018;
-      --muted:#776f60;
+      --muted:#5f594d;
       --line:rgba(24,59,42,.16);
       --white-line:rgba(255,248,236,.18);
       --shadow:0 24px 70px rgba(20,25,16,.12);
@@ -305,7 +305,7 @@
       box-shadow:var(--shadow);
     }
     .dark-card{background:var(--forest);color:var(--paper);border-color:rgba(255,255,255,.1)}
-    .card h3{margin:0 0 16px;font-size:22px;letter-spacing:-.015em;line-height:1.22}.card p{margin:0;color:var(--muted);line-height:1.62}.dark-card p{color:rgba(255,247,236,.78)}
+    .card h3{margin:0 0 14px;font-size:24px;letter-spacing:-.015em;line-height:1.18}.card p{margin:0;color:var(--muted);line-height:1.54;font-size:16px}.dark-card p{color:rgba(255,247,236,.84)}.clean-list{margin:0;padding-left:20px;color:var(--muted);line-height:1.58}.clean-list li{margin:6px 0}.big-line{font-size:18px;font-weight:850;color:var(--forest);line-height:1.35}.simple-note{margin-top:14px;padding:14px;border-radius:18px;background:rgba(255,255,255,.42);border:1px solid var(--line);color:var(--muted);line-height:1.48}
     .sales-loop{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:18px}.loop-step{border:1px solid var(--line);border-radius:20px;padding:16px;background:rgba(255,255,255,.42);text-align:center}.loop-step b{display:block;font-size:14px;line-height:1.2}.loop-step small{display:block;margin-top:6px;color:var(--muted);line-height:1.35}.control-list{display:grid;gap:12px}.control-item{display:grid;grid-template-columns:150px 1fr;gap:14px;border-bottom:1px solid var(--line);padding:0 0 12px}.control-item:last-child{border-bottom:0;padding-bottom:0}.control-item b{color:var(--forest)}.control-item span{color:var(--muted)}
     .status{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 12px;margin-bottom:18px;font-size:11px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;background:#ead9c2;color:#6f4a2e}.status.red{background:#f0d5ca;color:#9a3d2e}.status.green{background:#dfe8d6;color:#355f3c}.status.gold{background:#efdfb8;color:#73530f}.status.dark{background:rgba(255,255,255,.12);color:var(--paper)}.dot{width:8px;height:8px;border-radius:50%;background:currentColor}
 
@@ -371,7 +371,7 @@
   <main>
     <div class="wrap command-strip">
       <div class="strip-card">
-        <div><div class="strip-title">Chief of Staff Snapshot</div><div class="strip-text">Your operating focus: sell tickets, lock rain backup, finalize evening experience, capture 7 content reels, and delegate people/production lanes.</div></div>
+        <div><div class="strip-title">Chief of Staff Snapshot</div><div class="strip-text">Today: sell tickets, lock rain backup, capture 7 reels, and delegate clearly.</div></div>
         <div class="strip-actions"><span class="chip">11 / 120 tickets</span><span class="chip">$772.80 known revenue</span><span class="chip">Break-even $3k</span><span class="chip">Profit goal $8k</span></div>
       </div>
     </div>
@@ -382,35 +382,39 @@
         <div class="card">
           <span class="status red"><span class="dot"></span>Do first</span>
           <ul class="action-list">
-            <li class="action"><span class="num">1</span><div><b>Push ticket sales with current numbers visible.</b><br><span style="color:var(--muted)">Current: 11 sold · next target 20 by Jun 20 · $632.80 net tickets · $140 vendor revenue.</span></div><span class="owner">Paris</span></li>
-            <li class="action"><span class="num">2</span><div><b>Create 7 simple reel/skit options from the June 18 shoot.</b><br><span style="color:var(--muted)">Goal: enough easy, fun content to post through the next week and drive ticket sales.</span></div><span class="owner">Paris + Matt</span></li>
-            <li class="action"><span class="num">3</span><div><b>Lock the three strategic risks.</b><br><span style="color:var(--muted)">Revenue/sellout, rain backup plan, and final evening experience/music-party decision.</span></div><span class="owner">Paris / Team</span></li>
+            <li class="action"><span class="num">1</span><div><b>Sell 9 more tickets by June 20.</b><br><span style="color:var(--muted)">Current: 11 sold → target: 20.</span></div><span class="owner">Paris</span></li>
+            <li class="action"><span class="num">2</span><div><b>Create 7 reel/skit options.</b><br><span style="color:var(--muted)">3 attract · 1 nurture · 2 position · 1 convert.</span></div><span class="owner">Paris + Matt</span></li>
+            <li class="action"><span class="num">3</span><div><b>Resolve 3 risks.</b><br><span style="color:var(--muted)">Revenue · rain backup · evening experience.</span></div><span class="owner">Paris / Team</span></li>
           </ul>
         </div>
         <div class="card dark-card">
           <span class="status dark"><span class="dot"></span>Our mission</span>
           <h3>Awaken exists to help people feel human again.</h3>
-          <p>We are creating a field for people who feel disconnected, overwhelmed, isolated, emotionally heavy, or stuck in survival mode to return to their body, their aliveness, and each other.</p>
-          <p style="margin-top:16px"><b>Giving back:</b> 10% of profits will be donated to <a href="https://jeantweed.com/" target="_blank" rel="noopener" style="color:var(--paper);text-decoration:underline">The Jean Tweed Centre</a>, a Toronto-based not-for-profit supporting women and families through substance use, gambling, mental health concerns, trauma, violence, housing instability, and related challenges.</p>
+          <ul class="clean-list" style="color:rgba(255,247,236,.84)">
+            <li>Return to the body.</li>
+            <li>Feel lighter and more alive.</li>
+            <li>Reconnect with real people.</li>
+          </ul>
+          <p style="margin-top:16px"><b>Giving back:</b> 10% of profits will be donated to <a href="https://jeantweed.com/" target="_blank" rel="noopener" style="color:var(--paper);text-decoration:underline">The Jean Tweed Centre</a>.</p>
         </div>
       </div>
     </section>
 
     <section id="mission" class="wrap">
-      <div class="section-head"><div><div class="label">Mission + giving back</div><h2>Why Awaken exists</h2><p>This is not just a beautiful event. It is a response to a real human problem: disconnection, emotional heaviness, burnout, loneliness, nervous-system overload, and the need for safer spaces to feel, move, connect, and begin again.</p></div></div>
+      <div class="section-head"><div><div class="label">Mission + giving back</div><h2>Why Awaken exists</h2><p>A simple mission: help people move from disconnection back into body, community, and aliveness.</p></div></div>
       <div class="grid cols-3">
-        <div class="card"><span class="status green"><span class="dot"></span>The problem</span><h3>People are craving real connection.</h3><p>Many people are functioning on the outside while feeling isolated, anxious, disconnected from their bodies, emotionally shut down, or stuck in survival mode.</p></div>
-        <div class="card"><span class="status gold"><span class="dot"></span>Why us</span><h3>Awaken turns healing into a shared field.</h3><p>Breathwork, music, nature, play, ceremony, tea, movement, and honest connection create a gentle doorway back to aliveness — without making people feel like they have to perform their healing.</p></div>
-        <div class="card dark-card"><span class="status dark"><span class="dot"></span>Giving back</span><h3>10% of profits to Jean Tweed.</h3><p>The Jean Tweed Centre supports women and families through substance use, gambling, mental health concerns, trauma, violence, housing instability, and related challenges. AWTR’s giving-back commitment extends the mission beyond the people in the field.</p></div>
+        <div class="card"><span class="status green"><span class="dot"></span>The problem</span><h3>People are craving real connection.</h3><ul class="clean-list"><li>Lonely but busy.</li><li>Burned out but still performing.</li><li>Disconnected from body and joy.</li></ul></div>
+        <div class="card"><span class="status gold"><span class="dot"></span>Why us</span><h3>Healing can feel social, playful, and beautiful.</h3><ul class="clean-list"><li>Breathwork + ceremony.</li><li>Music + movement.</li><li>Nature + honest connection.</li></ul></div>
+        <div class="card dark-card"><span class="status dark"><span class="dot"></span>Giving back</span><h3>10% of profits to Jean Tweed.</h3><ul class="clean-list" style="color:rgba(255,247,236,.84)"><li>Women and families.</li><li>Mental health, trauma, substance use, housing instability.</li><li>Healing beyond the field.</li></ul></div>
       </div>
     </section>
 
     <section id="money" class="wrap">
-      <div class="section-head"><div><div class="label">Revenue critical</div><h2>Tickets + money</h2><p>The money board should make the next decision obvious: how many tickets are sold, what is the gap, and when Tier 1 closes.</p></div></div>
+      <div class="section-head"><div><div class="label">Revenue critical</div><h2>Tickets + money</h2><p>Track revenue, gaps, and the next ticket target.</p></div></div>
       <div class="grid cols-2">
         <div class="card">
           <span class="status gold"><span class="dot"></span>Known revenue</span>
-          <div class="money"><div><div class="amount">$772.80</div><p>Current revenue total. Breakdown below keeps tickets, vendors, and sponsorship visible.</p></div><div class="target"><b>$3,000</b><br>break-even target</div></div>
+          <div class="money"><div><div class="amount">$772.80</div><p>Current revenue total.</p></div><div class="target"><b>$3,000</b><br>break-even target</div></div>
           <div class="bar"><span></span></div>
           <div class="revenue-mix">
             <div class="mix-row"><b>Tickets</b><div class="mix-track"><span class="mix-ticket"></span></div><span>$632.80</span></div>
@@ -436,7 +440,7 @@
     </section>
 
     <section id="expenses" class="wrap">
-      <div class="section-head"><div><div class="label">Cost control</div><h2>Expenses</h2><p>Keep expenses visible so revenue decisions are grounded. This section separates paid, upcoming, and risk items.</p></div></div>
+      <div class="section-head"><div><div class="label">Cost control</div><h2>Expenses</h2><p>Track known costs and risk items.</p></div></div>
       <div class="grid cols-2">
         <div class="card">
           <span class="status gold"><span class="dot"></span>Known / upcoming</span>
@@ -451,23 +455,23 @@
         <div class="card dark-card">
           <span class="status dark"><span class="dot"></span>Expense risks</span>
           <h3>Two practical issues need a plan.</h3>
-          <p><b>Porta-potty backup:</b> what happens if one breaks or needs servicing?<br><br><b>Ticks/insects:</b> create prevention guidance, supplies, and vendor comfort plan before the guest logistics email.</p>
+          <ul class="clean-list" style="color:rgba(255,247,236,.84)"><li>Porta-potty backup if one breaks.</li><li>Tick/insect prevention plan.</li><li>Guest + vendor comfort supplies.</li></ul>
         </div>
       </div>
     </section>
 
     <section id="sales" class="wrap">
-      <div class="section-head"><div><div class="label">Sales engine</div><h2>Sell the world, not the workshop</h2><p>Daily content now follows four missions: attract new people, nurture the warm audience, position authority, and convert interest into ticket sales.</p></div></div>
+      <div class="section-head"><div><div class="label">Sales engine</div><h2>Sell the world, not the workshop</h2><p>One post per day. One clear mission per post.</p></div></div>
       <div class="grid cols-2">
         <div class="card dark-card">
           <span class="status dark"><span class="dot"></span>No sugar coating</span>
           <h3>Sellout path is now visible.</h3>
-          <p>Targets: 20 by Jun 20, 40 by Jun 27, 60 by Jul 4, 80 by Jul 11, and 120 by Jul 18. Oversell target assumes ~10% no-show buffer against 111 guest capacity.</p>
+          <ul class="clean-list" style="color:rgba(255,247,236,.84)"><li>June 20: 20 tickets</li><li>July 4: 60 tickets</li><li>July 18: 120 tickets</li></ul>
         </div>
         <div class="card">
           <span class="status gold"><span class="dot"></span>Weekly content mix</span>
           <h3>Post daily until July 18.</h3>
-          <p>Use the weekly ratio so content does not become random or overly salesy.</p>
+          <p>Simple weekly rhythm:</p>
           <div class="weekly-mix">
             <div class="mix-pill"><b>3</b><small>Attract</small></div>
             <div class="mix-pill"><b>1</b><small>Nurture</small></div>
@@ -480,7 +484,7 @@
         <div class="card">
           <span class="status red"><span class="dot"></span>Ticket control board</span>
           <div class="control-list">
-            <div class="control-item"><b>Weekly target</b><span>Jun 20: 20 · Jun 27: 40 · Jul 4: 60 · Jul 11: 80 · Jul 18: 120</span></div>
+            <div class="control-item"><b>Weekly target</b><span>20 by Jun 20<br>40 by Jun 27<br>60 by Jul 4<br>80 by Jul 11<br>120 by Jul 18</span></div>
             <div class="control-item"><b>Actual sold</b><span>11 sold today. Sam owns ticket sales tracking.</span></div>
             <div class="control-item"><b>Gap</b><span>Need +9 tickets by Jun 20 target; +109 tickets to final 120 target.</span></div>
             <div class="control-item"><b>Top content</b><span>What should we repeat?</span></div>
@@ -491,17 +495,17 @@
           <span class="status green"><span class="dot"></span>Content missions</span>
           <h3>Choose the mission before choosing the format.</h3>
           <div class="mission-grid">
-            <div class="mission-card"><small>Mission 1</small><b>Attract</b><span>Top of funnel. Bring in new people using storytelling and trending formats.</span></div>
-            <div class="mission-card"><small>Mission 2</small><b>Nurture</b><span>Warm audience. Use raw BTS, struggle, vulnerable, relatable behind-the-scenes stories.</span></div>
-            <div class="mission-card"><small>Mission 3</small><b>Position</b><span>Authority. Share brand-building wins, belief-led moments, teacher/expert content, and contrarian views.</span></div>
-            <div class="mission-card"><small>Mission 4</small><b>Convert</b><span>Ticket sales. Use top-performing formats: talking head, B-roll + text, or carousel with coach-level clarity.</span></div>
+            <div class="mission-card"><small>Mission 1</small><b>Attract</b><span>New people. Storytelling + trends.</span></div>
+            <div class="mission-card"><small>Mission 2</small><b>Nurture</b><span>Warm audience. Raw BTS + relatable truth.</span></div>
+            <div class="mission-card"><small>Mission 3</small><b>Position</b><span>Authority. Wins, beliefs, teaching, contrarian views.</span></div>
+            <div class="mission-card"><small>Mission 4</small><b>Convert</b><span>Ticket sales. Talking head, B-roll text, or carousel.</span></div>
           </div>
         </div>
       </div>
       <div class="card" style="margin-top:24px">
         <span class="status red"><span class="dot"></span>Quick generator prompt</span>
         <h3>Daily AWTR content prompt</h3>
-        <p><b>Pick one:</b> Attract / Nurture / Position / Convert. Then fill this in: “Today I want to speak to [audience] about [message]. The feeling is [alive / connected / playful / grounded / lighter]. The CTA is [buy ticket / save / share / DM / join July 18].”</p>
+        <div class="simple-note"><b>Prompt:</b> Today I’m speaking to [audience] about [message]. The feeling is [alive / connected / playful / grounded]. The CTA is [buy ticket / save / share / DM].</div>
         <div class="idea-list" style="margin-top:16px">
           <div class="idea"><b>Attract example</b><span>Storytelling reel: “I realized Toronto doesn’t need another networking event — it needs a place to feel human again.”</span></div>
           <div class="idea"><b>Nurture example</b><span>BTS reel: show the messy build — tickets, rain plan, content shoot, practitioner call — and why the mission matters anyway.</span></div>
@@ -518,7 +522,7 @@
     </section>
 
     <section id="content" class="wrap">
-      <div class="section-head"><div><div class="label">Brand critical</div><h2>Content shoot — June 18</h2><p>Video shoot is now Thursday, June 18 at 5:30 PM. The goal is at least 7 simple, easy, fun reel/skit options: 3 attract, 1 nurture, 2 position, and 1 convert for the next content week.</p></div></div>
+      <div class="section-head"><div><div class="label">Brand critical</div><h2>Content shoot — June 18</h2><p>Thursday, June 18 at 5:30 PM. Capture 7 easy reels for next week.</p></div></div>
       <div class="grid cols-3">
         <div class="card"><span class="status red"><span class="dot"></span>Before shoot</span><h3>Lock logistics</h3><p>Confirm skit ideas, shot list, posting order, edit owner, and which reels push tickets directly.</p></div>
         <div class="card"><span class="status green"><span class="dot"></span>Creative direction</span><h3>Sell the feeling</h3><p>Lead with aliveness, play, belonging, nature, music, and connection — not “more workshops.”</p></div>
@@ -527,25 +531,25 @@
     </section>
 
     <section id="zones" class="wrap">
-      <div class="section-head"><div><div class="label">Guest experience</div><h2>Experience zones</h2><p>Awaken should feel spatial and exploratory — not like a rigid retreat schedule.</p></div></div>
+      <div class="section-head"><div><div class="label">Guest experience</div><h2>Experience zones</h2><p>Simple zones. Clear flow. Easy to understand.</p></div></div>
       <div class="zones" id="zoneStrip"></div>
       <div class="grid cols-2" style="margin-top:16px">
-        <div class="card"><h3>Guest flow</h3><p><b>Check-in → Vendor Village → Main Event → Soft closing → optional evening social.</b> Vendor traffic depends on placement. Music, lights, dance, and smoke machine energy can live in Vendor Village after the grounding close.</p></div>
-        <div class="card"><h3>Trust builders</h3><p>Clear signage, visible volunteers, water station, first aid, washrooms, rain plan, covered areas, parking guidance, porta-potty backup, and tick/insect mitigation.</p></div>
+        <div class="card"><h3>Guest flow</h3><p><b>Check-in → Vendor Village → Main Event → Soft close → optional evening social.</b></p></div>
+        <div class="card"><h3>Trust builders</h3><ul class="clean-list"><li>Signage + volunteers.</li><li>Water, first aid, washrooms.</li><li>Rain, ticks, porta-potty backup.</li></ul></div>
       </div>
       <div class="grid cols-2" style="margin-top:24px">
-        <div class="card"><span class="status red"><span class="dot"></span>Rain backup</span><h3>Warehouse use must be confirmed.</h3><p>Sam to confirm with Danielle whether the warehouse can be used as the backup option. Current canopy inventory: one 30×10 canopy and one 10×10 canopy. Vendor Village can sit under canopy, but outdoor breathwork/yoga/sound still need a cover solution.</p></div>
-        <div class="card"><span class="status gold"><span class="dot"></span>Known expenses</span><h3>$335.80 currently known / upcoming.</h3><p>Boosted IG post $67.80, extended email marketing $41, poster printing $7, porta-potties $220 for two. Also plan for porta-potty failure backup and tick/insect mitigation.</p></div>
+        <div class="card"><span class="status red"><span class="dot"></span>Rain backup</span><h3>Warehouse use must be confirmed.</h3><ul class="clean-list"><li>Sam confirms warehouse with Danielle.</li><li>Canopies: one 30×10 + one 10×10.</li><li>Breathwork/yoga/sound still need cover.</li></ul></div>
+        <div class="card"><span class="status gold"><span class="dot"></span>Known expenses</span><h3>$335.80 currently known / upcoming.</h3><ul class="clean-list"><li>Tracked: $335.80.</li><li>Porta-potties: $220 for two.</li><li>Plan backup + tick mitigation.</li></ul></div>
       </div>
     </section>
 
     <section id="decisions" class="wrap">
-      <div class="section-head"><div><div class="label">Founder bottlenecks</div><h2>Decisions needed</h2><p>These are the founder decisions that prevent drift and unlock execution.</p></div></div>
+      <div class="section-head"><div><div class="label">Founder bottlenecks</div><h2>Decisions needed</h2><p>Decisions that unlock execution.</p></div></div>
       <div class="card"><div class="decision-list" id="decisionList"></div></div>
     </section>
 
     <section id="milestones" class="wrap">
-      <div class="section-head"><div><div class="label">Weekly rhythm</div><h2>This week’s milestones</h2><p>Keep the system simple: revenue, content, operations, experience, and delegation.</p></div></div>
+      <div class="section-head"><div><div class="label">Weekly rhythm</div><h2>This week’s milestones</h2><p>Who owns what this week.</p></div></div>
       <div class="card" style="padding:0" id="milestoneList"></div>
     </section>
 
