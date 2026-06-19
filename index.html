@@ -687,6 +687,9 @@
       {id:'practitioner-agenda', title:'Prep practitioner call.', detail:'Mission, roles, codes, incentives, content asks, and co-creation.', owner:'Paris / Rachel', due:'Due Jun 18'},
       {id:'insurance-duuo', title:'Get Duuo insurance quote.', detail:'Confirm private property, general liability, attendee injury, vendor/practitioner, rain/cancellation coverage.', owner:'Paris / Sam', due:'Due Jun 21'},
       {id:'deck-finalize', title:'Finalize Canva decks.', detail:'Sponsor deck + short vendor deck need final Canva versions.', owner:'Paris', due:'Due Jun 21'},
+      {id:'rosa-message', title:'Message Rosa.', detail:'Send Rosa the next clear ask/update and confirm her role, offering, setup needs, and next action.', owner:'Paris', due:'Due today'},
+      {id:'team-notes', title:'Send Rachel meeting notes to team chat.', detail:'Share the concise audit: website essentials, itinerary, included/bring list, 7 reels, rain/insurance, dance earlier, decks, vendor onboarding.', owner:'Paris', due:'Due today'},
+      {id:'inventory-dashboard', title:'Create interactive inventory board.', detail:'Track items needed/have/missing, owner, quantity, source, status, notes, and who can contribute items.', owner:'Paris / Maya', due:'Due Jun 21'},
       {id:'francesca-onboard', title:'Onboard Francesca / Amanita Haus.', detail:'Confirm vendor fit, offering, fee/payment, setup needs, power, arrival, and social handle.', owner:'Paris', due:'Due Jun 21'},
       {id:'cover-solution', title:'Find cover for main programming.', detail:'Breathwork, yoga, and sound need rain protection.', owner:'Sam / Paris', due:'Due Jun 23'},
       {id:'vendor-setup', title:'Confirm vendor setup needs.', detail:'Canopy, power, tables, arrival, signage, and payment status.', owner:'Sam', due:'Due Jun 23'},
@@ -771,9 +774,12 @@
       {level:'urgent', title:'Confirm breathwork quiet protocol', detail:'Vendor music down by 5 PM, no competing activations, support team for emotional release, water/tissues/blankets, and clear integration path after.'},
       {level:'urgent', title:'Confirm rain date + cover plan', detail:'Ask venue host if a rain date is possible. Create light-rain plan, 48-hour weather comms, tents/canopies, covered areas, and ticket language for unsafe weather.'},
       {level:'urgent', title:'Get Duuo event insurance quote', detail:'Confirm private property coverage, general liability, attendee injury, vendor/practitioner coverage, and rain/cancellation coverage if available.'},
+      {level:'urgent', title:'Send Rachel meeting notes to team chat', detail:'Keep it short: decisions, why it matters, owners, and immediate next actions so everyone aligns without reading a huge debrief.'},
+      {level:'urgent', title:'Message Rosa', detail:'Confirm her role/offering, setup needs, power/table needs, arrival window, and next action.'},
       {level:'urgent', title:'Confirm safety + comfort plan', detail:'Tick/insect mitigation, porta-potty backup, first aid, hydration, fire safety, projection/fire dancing safety, sound rules, and night lighting.'},
       {level:'strategic', title:'Confirm vendor/practitioner model', detail:'Moriah and Vivik tarot model; Rosa tea/forest role; Flojo/Freshouse/Village Juicery sponsor/vendor/sampling asks; vendor arrival and power needs.'},
       {level:'strategic', title:'Simplify production for 2026', detail:'Prioritize solid sound, fire, warm lighting, and good footage. Park smoke machines, heavy projection, and bigger immersive production for 2027 unless extremely easy.'},
+      {level:'strategic', title:'Build inventory board', detail:'Add an interactive product/equipment inventory: have, need, missing, owner, source, quantity, status, and contribution notes.'},
       {level:'strategic', title:'Confirm ticket urgency + sales push', detail:'Tier 1 close date, 20-ticket target, 7 edited reels, daily content/DM rhythm, partner shares, practitioner codes, and who tracks conversion.'}
     ];
     document.getElementById('decisionList').innerHTML = decisions.map((d,i)=>`<div class="decision ${d.level}"><input id="d${i}" type="checkbox"><label for="d${i}"><b>${d.title}</b><span>${d.detail}</span></label></div>`).join('');
@@ -863,7 +869,7 @@
           ['Assign breathwork support team: water, tissues, blankets, integration support','Rachel + Paris'],
           ['Confirm Duuo event insurance quote and rain date/cancellation language','Paris + Sam']
         ],
-        waiting:'Weather read, warehouse yes/no, rain date possibility, Duuo quote, named volunteers.', next:'Create one risk register with owner + backup plan for rain, injury/liability, bugs, washrooms, fire, and sound.'
+        waiting:'Weather read, warehouse yes/no, rain date possibility, Duuo quote, named volunteers, inventory gaps.', next:'Create one risk register and one inventory board with owner + backup plan for each critical item.'
       },
       {
         id:'team', outcome:'Team can execute without Paris holding everything', owner:'Paris + Sam', focus:'Team Distribution / Run Sheet', support:'All leads',
