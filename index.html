@@ -459,14 +459,14 @@
       <div class="grid cols-2">
         <div class="card">
           <span class="status gold"><span class="dot"></span>Known revenue</span>
-          <div class="money"><div><div class="amount">$772.80</div><p>Confirmed revenue. Intuition verbally agreed to $2,222 sponsorship; add to confirmed revenue once contract is signed.</p></div><div class="target"><b>$3,000</b><br>break-even target</div></div>
+          <div class="money"><div><div class="amount">$772.80</div><p>Confirmed revenue. Intuition verbally agreed to $2,222 sponsorship; once signed, projected total is $2,994.80.</p></div><div class="target"><b>$3,000</b><br>break-even target</div></div>
           <div class="bar"><span></span></div>
           <div class="revenue-mix">
             <div class="mix-row"><b>Tickets</b><div class="mix-track"><span class="mix-ticket"></span></div><span>$632.80</span></div>
             <div class="mix-row"><b>Vendors</b><div class="mix-track"><span class="mix-vendor"></span></div><span>$140</span></div>
             <div class="mix-row"><b>Verbal</b><div class="mix-track"><span class="mix-sponsor" style="width:74%"></span></div><span>$2,222</span></div>
           </div>
-          <div class="metrics"><div class="metric"><b>26%</b><small>confirmed to break-even</small></div><div class="metric"><b>100%</b><small>break-even reached with Intuition verbal</small></div><div class="metric"><b>+$994.80</b><small>above break-even after verbal</small></div></div>
+          <div class="metrics"><div class="metric"><b>26%</b><small>confirmed to break-even</small></div><div class="metric"><b>99.8%</b><small>to break-even with Intuition verbal</small></div><div class="metric"><b>$5.20</b><small>short of break-even after verbal</small></div></div>
         </div>
         <div class="card">
           <span class="status red"><span class="dot"></span>June 27 checkpoint</span>
@@ -652,7 +652,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
           <h3>Guest-facing journey</h3>
           <div class="journey">
             <div class="journey-step"><div class="journey-time">11–2</div><div><h4>Arrival, check-in, vendors, forest soft open</h4><p>Gate signage → parking signs → check-in → Vendor Village with afternoon music → guests settle at main field or explore the forest.</p></div></div>
-            <div class="journey-step"><div class="journey-time">1–2</div><div><h4>Forest tea opening</h4><p>Soft tea moment at the Forest Exploration Stage. Picnic tables for ~10 people; tea, tarot, painting, journaling, and chill.</p></div></div>
+            <div class="journey-step"><div class="journey-time">1–2</div><div><h4>Forest tea + intuition opening</h4><p>Soft tea moment at the Forest Tea + Intuition Lab for ~10 people; Rosa tea, Mei/Intuition prompts, painting, journaling, and chill.</p></div></div>
             <div class="journey-step"><div class="journey-time">2–3</div><div><h4>Opening ceremony</h4><p>Everyone returns to the Main Wellness Field. Gate closes for the circle so no one enters mid-opening.</p></div></div>
             <div class="journey-step"><div class="journey-time">3–4</div><div><h4>Connection hour</h4><p>Authentic relating, eye-gazing, meeting people, and community bonding so guests feel connected before deeper practice.</p></div></div>
             <div class="journey-step"><div class="journey-time">4–5</div><div><h4>Movement / dance energy shift</h4><p>Put higher-energy dance earlier, before the deep breathwork container, so guests still have energy and the close can be grounded.</p></div></div>
@@ -784,7 +784,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
       {name:'Heal House', lane:'In-kind / Sponsor', role:'Biohacking sponsor/partner: Fred PEMF machine, red light therapy, foot massage', need:'Confirm equipment list, footprint, power/generator needs, staff count, signage, guest flow, and Fred’s PEMF setup', tags:['confirmed','setup']},
       {name:'Talisa / Picnic setup', lane:'Needs Replacement', role:'Original picnic table setup for forest is unavailable', need:'Do not rely on Talisa. Source replacement low table, rugs, cushions, blankets, baskets, tea styling, and forest seating for ~10', tags:['decision','setup']},
       {name:'Vendor Village power', lane:'Needs Replacement', role:'No reliable power near garage / Vendor Village', need:'Get generator quote/borrow source, fuel plan, extension cords, power bars, rain cover, and one power safety owner', tags:['decision','setup']},
-      {name:'Moriah', lane:'Pending', role:'Tarot reader / shaman / somatic coach', need:'Confirm vendor/practitioner model, fee, setup, and placement in forest/intuition area', tags:['pending','payment','setup','decision']},
+      {name:'Moriah', lane:'No Go', role:'Tarot reader / shaman / somatic coach', need:'Removed from active planning. Do not include in forest/intuition area unless Paris reopens.', tags:['decision']},
       {name:'Vivik', lane:'No Go', role:'Tarot reader', need:'No go — remove from active outreach and do not plan forest/intuition placement around Vivik.', tags:['decision']},
       {name:'Flojo / Yerba maté drink', lane:'Pending', role:'Beverage lead', need:'Confirm exact brand/contact, ask model, sampling/table needs, and whether this is vendor, sponsor, or in-kind', tags:['pending','payment','setup']},
       {name:'Francesca / Amanita Haus', lane:'Pending', role:'Mushroom / clothing / crystals vendor lead', need:'Onboard Francesca: confirm offering, vendor fee, payment, power/table needs, arrival time, social handle, and deck link', tags:['pending','payment','setup']},
@@ -823,7 +823,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
     const inventoryItems = [
       {id:'mats', item:'Yoga mats', category:'Practice', qty:'30–50', owner:'Paris / team', source:'Borrow first', status:'Borrow', note:'Guests bring their own, but we need extras for comfort and forgotten mats.'},
       {id:'blankets', item:'Blankets', category:'Comfort', qty:'30+', owner:'Rachel / volunteers', source:'Borrow + thrift', status:'Borrow', note:'Breathwork, sound, integration, evening fire.'},
-      {id:'cushions', item:'Cushions / pillows', category:'Forest lounge', qty:'20–30', owner:'Forest host', source:'Borrow', status:'Borrow', note:'Tea, tarot, journaling, connection lounge, photo moment.'},
+      {id:'cushions', item:'Cushions / pillows', category:'Forest lounge', qty:'20–30', owner:'Forest host', source:'Borrow', status:'Borrow', note:'Tea, intuition prompts, journaling, connection lounge, photo moment.'},
       {id:'tables', item:'Folding tables / low tables', category:'Setup', qty:'8–12 vendor + 1 forest low table', owner:'Sam / Paris', source:'Vendors + borrow', status:'Confirm', note:'Vendor Village, check-in, tea, art, food/drinks. Forest low table is urgent because Talisa setup is unavailable.'},
       {id:'tablecloths', item:'Tablecloths / linen', category:'Beauty', qty:'10–14', owner:'Paris / Matt', source:'Borrow / buy', status:'Need', note:'Makes the event feel intentional, not random market tables.'},
       {id:'signage', item:'Signs + easels / stands', category:'Wayfinding', qty:'10–15 signs', owner:'Matt / volunteers', source:'Print + borrow stands', status:'Need', note:'Parking, check-in, washrooms, water, forest, main field, vendors, first aid.'},
@@ -836,7 +836,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
       {id:'intuition', item:'Intuition Lab materials', category:'Forest Tea + Intuition Lab', qty:'1 activation kit', owner:'Paris / Mei', source:'Mei / Intuition + print', status:'Confirm', note:'QR/app journey, field cards, prompts, gift mechanics, signage, and data/lead capture. Contract needed.'},
       {id:'art', item:'Painting / journaling supplies', category:'Forest Tea + Intuition Lab', qty:'10–20 guests at a time', owner:'Paris / forest host', source:'Borrow / buy', status:'Need', note:'Paint, brushes, paper/canvas, journals, pens, wipes, trash bag.'},
       {id:'tea', item:'Rosa tea ceremony setup', category:'Forest Tea + Intuition Lab', qty:'1 complete setup', owner:'Rosa / Paris', source:'Confirm with Rosa', status:'Confirm', note:'Rosa onboarded. Confirm tea, cups, hot water, tray, cloth, waste plan, helper, seating, and rain backup.'},
-      {id:'tarot', item:'Tarot/oracle setup', category:'Forest lounge', qty:'1–2 stations', owner:'Moriah / Vivik', source:'Practitioner-owned', status:'Confirm', note:'Confirm chairs, small table, shade/rain protection, timing.'},
+      {id:'tarot', item:'Tarot/oracle setup', category:'Forest lounge', qty:'0 active', owner:'No active owner', source:'Paused', status:'Confirm', note:'Moriah and Vivik are no-go. Keep tarot/oracle setup paused unless a new reader is confirmed.'},
       {id:'trash', item:'Trash / recycling / compost bins + bags', category:'Operations', qty:'6–10 stations', owner:'Sam / volunteers', source:'Buy / venue', status:'Need', note:'Vendor Village, food, main field, forest, washroom area.'},
       {id:'checkin', item:'Check-in supplies', category:'Arrival', qty:'1 station', owner:'Sam', source:'Buy / print', status:'Need', note:'Guest list, wristbands, pens, waiver if needed, schedule cards, map, cash box if needed.'},
       {id:'forest-seating', item:'Forest rugs / cushions / blankets', category:'Forest Tea + Intuition Lab', qty:'10 guest capacity', owner:'Paris', source:'Borrow / thrift / rent', status:'Need', note:'Replacement for unavailable Talisa picnic setup. Needs to feel cozy, intentional, and photo-ready.'},
@@ -949,16 +949,16 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
         waiting:'Role split with Meesh, Amanda music, practitioner setup needs, final support team for breathwork.', next:'Send one clean practitioner confirmation message with time/place/setup/content ask.'
       },
       {
-        id:'forest', outcome:'Forest Tea + Intuition Lab becomes the magic side quest', owner:'Paris', focus:'Tea / Intuition / Tarot / Painting', support:'Rosa + Moriah + Vivik + host',
+        id:'forest', outcome:'Forest Tea + Intuition Lab becomes the magic side quest', owner:'Paris', focus:'Tea / Intuition / Painting', support:'Rosa + Mei + forest host',
         done:'The forest tea + intuition area is clearly marked, staffed, beautiful, and ready for ~10 people at a time without pulling energy away from main containers.',
         actions:[
           ['Source replacement setup for ~10 people and define exact forest location','Paris + Sam'],
           ['Confirm Rosa tea ceremony flow from 1–2 PM and exact setup needs','Paris'],
           ['Confirm Mei/Intuition activation, contract, QR/app journey, and contribution amount','Paris'],
           ['Prepare painting/journaling supplies, cushions, table styling, trash plan','Paris + forest host'],
-          ['Create signage: Forest Exploration Stage / tea / tarot / journaling / chill','Matt or volunteer']
+          ['Create signage: Forest Tea + Intuition Lab / tea / prompts / journaling / chill','Matt or volunteer']
         ],
-        waiting:'Rosa setup details, Mei contract, Moriah model, Vivik removed/no-go, replacement furniture/decor, weather backup.', next:'Assign one Forest Tea + Intuition host and source the replacement setup.'
+        waiting:'Rosa setup details, Mei contract, forest host, replacement furniture/decor, weather backup. Moriah and Vivik are no-go.', next:'Assign one Forest Tea + Intuition host and source the replacement setup.'
       },
       {
         id:'vendors', outcome:'Vendor Village feels alive but controlled', owner:'Sam + Paris', focus:'Vendors / Partners / Biohacking / Food', support:'Vendor leads',
