@@ -474,12 +474,12 @@
           <p>Confirmed baseline remains 11 tickets sold, $648.64 gross, $632.80 net. Update after Sam sends latest count.</p>
           <ul class="target-list">
             <li>June 20: missed / needs recovery note</li>
-            <li>June 27: 40 tickets target / latest count needed</li>
+            <li>June 27: 40-ticket checkpoint / latest count needed · Tier 2 $85 closes July 4</li>
             <li>July 4: 60 tickets</li>
             <li>July 11: 80 tickets</li>
             <li>July 18: 120 tickets</li>
           </ul>
-          <div class="revenue-chips"><span class="chip">Tier 1 $65</span><span class="chip">Tier 2 $75</span><span class="chip">111 capacity · 120 oversell target</span><span class="chip profit-chip">Profit goal $8,000</span></div>
+          <div class="revenue-chips"><span class="chip">Tier 1 $65 closed closed</span><span class="chip">Tier 2 $85 closes July 4</span><span class="chip">111 capacity · 120 oversell target</span><span class="chip profit-chip">Profit goal $8,000</span></div>
         </div>
       </div>
     </section>
@@ -623,7 +623,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
           <li><b>Power reality:</b> capture where there is no power near garage/Vendor Village so generator planning is clear.</li>
           <li><b>Rosa + Mei story:</b> tea ceremony + intuition app as a forest “Awaken Your Intuition” journey.</li>
           <li><b>Amanda story:</b> 3–4 PM Connection Lab and possible evening Dance Academy by fire/DJ.</li>
-          <li><b>Direct conversion:</b> July 18 · Schomberg · 111 guests · come solo / bring a friend · get tickets.</li>
+          <li><b>Direct conversion:</b> July 18 · Schomberg · 111 guests · Tier 2 $85 closes July 4 · come solo / bring a friend · get tickets.</li>
         </ul>
       </div>
     </section>
@@ -740,6 +740,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
     sections.forEach(s => observer.observe(s));
 
     const actionQueue = [
+      {id:'website-instagram-update', title:'Update website + Instagram bio.', detail:'Reflect Intuition sponsor, Tier 2 $85 closes July 4, ticket CTA, revised forest/intuition programming, and current guest promise.', owner:'Paris / Matt', due:'Due Jun 28'},
       {id:'hospitality-brief', title:'Brief team on hospitality standard.', detail:'Every volunteer, vendor, practitioner, and core team member understands the guest promise: warm welcome, premium care, easy transitions, and emotional arc.', owner:'Paris / Sam', due:'Due Jun 28'},
       {id:'june27-map', title:'Map the site today.', detail:'Photograph + mark vendor spaces, forest tea/intuition zone, main field, guest flow, power gaps, and parking/check-in.', owner:'Paris / Sam / Matt', due:'Due Jun 27'},
       {id:'generator-plan', title:'Get generator plan.', detail:'No power near garage/Vendor Village. Confirm generator source, quantity, cost, fuel, cords, and safety owner.', owner:'Sam / Paris', due:'Due Jun 27'},
@@ -784,7 +785,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
       {name:'Talisa / Picnic setup', lane:'Needs Replacement', role:'Original picnic table setup for forest is unavailable', need:'Do not rely on Talisa. Source replacement low table, rugs, cushions, blankets, baskets, tea styling, and forest seating for ~10', tags:['decision','setup']},
       {name:'Vendor Village power', lane:'Needs Replacement', role:'No reliable power near garage / Vendor Village', need:'Get generator quote/borrow source, fuel plan, extension cords, power bars, rain cover, and one power safety owner', tags:['decision','setup']},
       {name:'Moriah', lane:'Pending', role:'Tarot reader / shaman / somatic coach', need:'Confirm vendor/practitioner model, fee, setup, and placement in forest/intuition area', tags:['pending','payment','setup','decision']},
-      {name:'Vivik', lane:'Pending', role:'Tarot reader', need:'Confirm vendor/practitioner model, fee, setup, and placement in forest/intuition area', tags:['pending','payment','setup','decision']},
+      {name:'Vivik', lane:'No Go', role:'Tarot reader', need:'No go — remove from active outreach and do not plan forest/intuition placement around Vivik.', tags:['decision']},
       {name:'Flojo / Yerba maté drink', lane:'Pending', role:'Beverage lead', need:'Confirm exact brand/contact, ask model, sampling/table needs, and whether this is vendor, sponsor, or in-kind', tags:['pending','payment','setup']},
       {name:'Francesca / Amanita Haus', lane:'Pending', role:'Mushroom / clothing / crystals vendor lead', need:'Onboard Francesca: confirm offering, vendor fee, payment, power/table needs, arrival time, social handle, and deck link', tags:['pending','payment','setup']},
       {name:'Eli’s Table', lane:'Pending', role:'Lebanese food / catering prospect', need:'Sam owns; waiting to receive catering menu and pricing', tags:['pending','setup']},
@@ -794,7 +795,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
       {name:'Rain Plan', lane:'Needs Clarity', role:'Operations backup', need:'Decide covered areas, schedule shift, guest communication, vendor/practitioner protection, and forest activation backup', tags:['decision','setup']},
       {name:'Tick / insect solution', lane:'Needs Clarity', role:'Guest comfort + vendor safety', need:'Create prevention plan, supplies list, and guest/vendor communication', tags:['decision','setup']}
     ];
-    const lanes = ['Confirmed','Paid / Vendor','In-kind / Sponsor','Verbal / Contract Needed','Needs Replacement','Needs Clarity','Pending'];
+    const lanes = ['Confirmed','Paid / Vendor','In-kind / Sponsor','Verbal / Contract Needed','Needs Replacement','Needs Clarity','Pending','No Go'];
     const board = document.getElementById('peopleBoard');
     function renderBoard(filter='all'){
       board.innerHTML = lanes.map(lane => {
@@ -864,6 +865,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
     });
 
     const decisions = [
+      {level:'urgent', title:'Update website + Instagram bio', detail:'Website and IG bio need current conversion copy: Tier 2 $85 closes July 4, Intuition sponsor/forest activation, clear July 18 CTA, and current event promise.'},
       {level:'urgent', title:'Confirm generator plan for Vendor Village', detail:'No reliable power near garage/Vendor Village. Decide generator source, quantity, cost, fuel, extension cords, rain cover, and power safety owner.'},
       {level:'urgent', title:'Replace Talisa picnic/forest setup', detail:'Talisa is unavailable. Source low table, rugs, cushions, blankets, baskets, tea styling, signage, and one forest host for the tea + Intuition Lab.'},
       {level:'urgent', title:'Finalize Mei / Intuition partnership contract', detail:'Verbal sponsorship is $2,222. Confirm contract, deliverables, QR/app journey, guest gift/field card, data capture, payment timing, and sign with Mei’s company.'},
@@ -878,7 +880,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
       {level:'urgent', title:'Confirm safety + comfort plan', detail:'Tick/insect mitigation, porta-potty backup, first aid, hydration, fire safety, night lighting, power safety, and sound rules.'},
       {level:'strategic', title:'Create clean guest + vendor map', detail:'Turn June 27 site photos into one simple map for vendors, volunteers, and guests.'},
       {level:'strategic', title:'Simplify production for 2026', detail:'Prioritize solid sound, generator safety, fire, warm lighting, clear signage, and good footage. Park heavy projection/smoke unless extremely easy.'},
-      {level:'strategic', title:'Confirm ticket urgency + sales push', detail:'Tier 1 close date, daily content/DM rhythm, partner shares, practitioner codes, and who tracks conversion.'}
+      {level:'strategic', title:'Confirm ticket urgency + sales push', detail:'Tier 2 $85 closes July 4, daily content/DM rhythm, partner shares, practitioner codes, website/IG bio update, and who tracks conversion.'}
     ];
     document.getElementById('decisionList').innerHTML = decisions.map((d,i)=>`<div class="decision ${d.level}"><input id="d${i}" type="checkbox"><label for="d${i}"><b>${d.title}</b><span>${d.detail}</span></label></div>`).join('');
 
@@ -912,11 +914,12 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
         id:'sales', outcome:'120 tickets / healthy room energy', owner:'Paris + Matt + Sam', focus:'Sales / Content / Community Push', support:'Practitioners + partners',
         done:'Ticket targets are tracked weekly, daily content is going out, warm DMs are active, and partners/practitioners know how to help sell.',
         actions:[
-          ['Confirm Tier 1 closing date and urgency message','Paris + Sam'],
+          ['Update ticket urgency: Tier 2 is $85 and closes July 4','Paris + Sam'],
           ['Post daily until July 28 using 3 Attract, 1 Nurture, 2 Position, 1 Convert weekly rhythm','Matt'],
           ['Edit 7 real-footage reels with music overlay and short text','Matt + Paris'],
           ['Run warm DM list and invite personal/community contacts','Paris + Sam'],
           ['Give practitioners/partners share copy, assets, and tracking codes','Matt + Paris'],
+          ['Update website + Instagram bio with Tier 2 $85 closes July 4 and current sponsor/programming proof','Paris + Matt'],
           ['Get latest count from Sam and track daily against 40 / 60 / 80 / 120 targets','Sam']
         ],
         waiting:'Latest ticket count, partner share commitments, June 27 site footage, Mei/Intuition announcement timing.', next:'Publish today’s site BTS: mapping the field, forest tea + intuition, and building a one-day world for real connection.'
@@ -955,7 +958,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
           ['Prepare painting/journaling supplies, cushions, table styling, trash plan','Paris + forest host'],
           ['Create signage: Forest Exploration Stage / tea / tarot / journaling / chill','Matt or volunteer']
         ],
-        waiting:'Rosa setup details, Mei contract, Moriah/Vivik model, replacement furniture/decor, weather backup.', next:'Assign one Forest Tea + Intuition host and source the replacement setup.'
+        waiting:'Rosa setup details, Mei contract, Moriah model, Vivik removed/no-go, replacement furniture/decor, weather backup.', next:'Assign one Forest Tea + Intuition host and source the replacement setup.'
       },
       {
         id:'vendors', outcome:'Vendor Village feels alive but controlled', owner:'Sam + Paris', focus:'Vendors / Partners / Biohacking / Food', support:'Vendor leads',
