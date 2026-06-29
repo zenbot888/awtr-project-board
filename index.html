@@ -400,10 +400,10 @@
         <div>
           <div class="strip-kicker">Today’s Focus</div>
           <div class="strip-title">This week: simplify HQ, sign Mei/Intuition, and push toward 60 tickets.</div>
-          <div class="strip-text">Focus the team on three lanes: ticket DMs + content, Intuition activation contract, and the human connection design map for event day.</div>
+          <div class="strip-text">Focus the team on three lanes: Asana-style task tracking, ticket DMs + content, and Mei/Intuition contract + activation.</div>
         </div>
         <div class="snapshot-metrics" aria-label="Current AWTR metrics">
-          <div class="snapshot-metric"><b>11 / 60</b><span>Tickets vs Jul 4 goal</span></div>
+          <div class="snapshot-metric"><b>16 / 60</b><span>Tickets vs Jul 4 goal</span></div>
           <div class="snapshot-metric"><b>20 days</b><span>Approx. to event</span></div>
           <div class="snapshot-metric"><b>$772.80</b><span>Confirmed revenue</span></div>
           <div class="snapshot-metric"><b>+$2,222</b><span>Intuition verbal</span></div>
@@ -534,7 +534,7 @@
         <div class="card">
           <span class="status red"><span class="dot"></span>This week’s sales push</span>
           <h3>Push toward 60 tickets by July 4.</h3>
-          <p>Confirmed baseline remains 11 tickets sold until Sam sends the latest count. Everyone helps: founders, practitioners, partners, and warm community chats.</p>
+          <p>Latest known count is 16 as of a few days ago. Confirm with Sam: who are the 16, and does that include team/practitioners/us?</p>
           <ul class="target-list">
             <li>Now: get latest ticket count from Sam</li>
             <li>This week: warm DMs + practitioner shares + daily founder content</li>
@@ -620,8 +620,8 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
           <span class="status red"><span class="dot"></span>Ticket control board</span>
           <div class="control-list">
             <div class="control-item"><b>Weekly target</b><span>60 by Jul 4<br>80 by Jul 11<br>120 by Jul 18</span></div>
-            <div class="control-item"><b>Actual sold</b><span>11 baseline until Sam sends latest count. Sam owns tracking.</span></div>
-            <div class="control-item"><b>Gap</b><span>Need latest count, then calculate exact gap to 60.</span></div>
+            <div class="control-item"><b>Actual sold</b><span>16 latest known. Confirm names + whether team/practitioners are included.</span></div>
+            <div class="control-item"><b>Gap</b><span>Need +44 to hit 60 by July 4, pending Sam confirmation.</span></div>
             <div class="control-item"><b>Top content</b><span>What should we repeat?</span></div>
             <div class="control-item"><b>Conversion push</b><span>Daily: founder story, science-backed belonging post, warm DMs, practitioner shares, partner reposts, and “DM AWAKEN” story CTA.</span></div>
             <div class="control-item"><b>Rachel formula</b><span>We offer X so that you can Y. Sell the outcome: spark, real connection, body reset, aliveness.</span></div>
@@ -815,16 +815,16 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
     sections.forEach(s => observer.observe(s));
 
     const actionQueue = [
-      {id:'mei-contract', title:'Finalize Mei / Intuition contract.', detail:'Confirm contract, $2,222 contribution, payment timing, QR/app journey, guest gift/field card, data capture, deliverables, and announcement timing.', owner:'Paris / Mei', due:'Due this week'},
-      {id:'ticket-push-60', title:'Push tickets toward 60 by July 4.', detail:'Run warm DMs, story CTAs, practitioner invites, partner reposts, and one clear daily post. Get latest count from Sam first.', owner:'Paris / Sam / Team', due:'Daily'},
-      {id:'practitioner-share-kit', title:'Give practitioners a share kit.', detail:'Send simple copy, story frame, ticket link/code, and ask each practitioner to invite friends and post once this week.', owner:'Paris / Matt', due:'Due 24h'},
-      {id:'human-design-map', title:'Map emotional arc into run sheet.', detail:'Add safety, belonging, rhythm, depth, and integration moments into the schedule with owners and supplies.', owner:'Paris / Sam / Rachel', due:'Due this week'},
-      {id:'latest-ticket-count', title:'Get latest ticket count.', detail:'Dashboard baseline is still 11 sold. Sam sends updated count so the gap to 60 is exact.', owner:'Sam', due:'Today'},
-      {id:'daily-content', title:'Post one heart-led content piece.', detail:'Use Attract/Nurture/Teach/Convert: adult loneliness, belonging as biological need, founder why, or direct AWAKEN CTA.', owner:'Paris / Matt / Sam', due:'Daily'},
-      {id:'website-instagram-update', title:'Update website + Instagram bio.', detail:'Use current promise: day in nature to reset, reconnect, and feel human again. Add Tier 2 $85 closes July 4.', owner:'Paris / Matt', due:'Due this week'},
-      {id:'zone-owner-check', title:'Assign owner for each connection moment.', detail:'Arrival, check-in, opening, Connection Lab, forest tea/intuition, breathwork support, food/integration, closing/fire.', owner:'Paris / Sam', due:'Due this week'},
-      {id:'forest-setup-replacement', title:'Replace forest setup.', detail:'Source low table, rugs, cushions, blankets, baskets, tea styling, signage, and a forest host.', owner:'Paris', due:'Due this week'},
-      {id:'generator-plan', title:'Get generator plan.', detail:'Confirm source, quantity, cost, fuel, cords, rain cover, and power safety owner for Vendor Village / DJ / Heal House needs.', owner:'Sam / Paris', due:'Due this week'}
+      {id:'create-mei-contract', title:'Create Mei / Intuition contract draft.', detail:'Contract has not been sent yet. Include $2,222, payment timing, QR/app journey, field card/gift, data capture, deliverables, and signature.', owner:'Paris / Maya', due:'Today'},
+      {id:'sam-ticket-count', title:'Confirm 16-ticket count with Sam.', detail:'Ask who the 16 people are and whether that includes founders, team, practitioners, or comps. Current gap to 60 is +44 pending confirmation.', owner:'Paris / Sam', due:'Today'},
+      {id:'practitioner-share-guide', title:'Create practitioner share guide.', detail:'Simple copy, story frames, ticket link/code, and ask each practitioner to invite friends and post once this week.', owner:'Paris / Matt', due:'Today'},
+      {id:'matt-website-update', title:'Follow up with Matt on website update.', detail:'Website has not been updated. Add new core wording, Tier 2 closes July 4, ticket CTA, and updated experience/zone language.', owner:'Paris / Matt', due:'Today'},
+      {id:'rosa-bio-tea', title:'Message Rosa for bio + tea details.', detail:'Need her bio, offering title, tea branding, setup list, supplies, helper needs, and timing.', owner:'Paris / Rosa', due:'Today'},
+      {id:'rachel-equipment', title:'Ask Rachel for equipment list updates.', detail:'Build clean equipment list by zone so nothing is missed for Welcome, Intuition, Rhythm, House, Creativity.', owner:'Paris / Rachel', due:'Today'},
+      {id:'amanda-rachel-mish', title:'Connect Amanda with Rachel + Mish.', detail:'Ask Rachel to reach out to Amanda so opening circle, authentic relating, and beginning flow are aligned.', owner:'Paris / Rachel', due:'Today'},
+      {id:'daily-sales-block', title:'Run 30-minute daily sales block.', detail:'Batch warm DMs and team sales asks. Continue every day until targets are hit.', owner:'Paris / Team', due:'Daily'},
+      {id:'opening-housekeeping', title:'Add Paris + Sam welcome/housekeeping to opening.', detail:'Carve out 20 minutes for welcome, schedule, safety, water, washrooms, consent, and how to move through the day.', owner:'Paris / Sam / Rachel', due:'This week'},
+      {id:'zone-ops-board', title:'Break operations down by zone.', detail:'Welcome Portal, Awaken The Rhythm, Awaken Your Intuition, Awaken House, Awaken Creativity — each needs owner, supplies, signage, timing.', owner:'Paris / Sam', due:'This week'}
     ];
     function renderTodayActions(){
       const list = document.getElementById('todayActions');
@@ -841,18 +841,31 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
     renderTodayActions();
 
     const dailyTasks = [
-      {lane:'Top 3 Today', id:'mei-contract-daily', task:'Finalize Mei / Intuition next step', meta:'Contract, activation, payment timing, QR/app journey'},
-      {lane:'Top 3 Today', id:'ticket-dms', task:'Send warm ticket DMs', meta:'Batch outreach; push toward 60 by July 4'},
-      {lane:'Top 3 Today', id:'share-kit', task:'Send practitioner share kit', meta:'Ask practitioners to invite friends + post once'},
-      {lane:'Small Fixes', id:'capacity-copy', task:'Fix capacity language where needed', meta:'111 humans / 120 oversell target — keep clear'},
-      {lane:'Small Fixes', id:'bio-check', task:'Check IG bio + website CTA consistency', meta:'DM AWAKEN / ticket link / Tier 2 closes July 4'},
-      {lane:'Research', id:'neuro-content', task:'Turn neuroscience notes into 1 teaching post', meta:'Belonging is biological; social connection is reward'},
-      {lane:'Research', id:'event-design-examples', task:'Collect 3 examples of connection moments', meta:'Arrival ritual, name prompts, closing integration'},
-      {lane:'Reach-outs', id:'sam-count', task:'Ask Sam for latest ticket count', meta:'Needed to calculate real gap to 60'},
-      {lane:'Reach-outs', id:'mei-followup', task:'Message Mei about contract + activation checklist', meta:'Key sponsorship + forest activation'},
-      {lane:'Reach-outs', id:'team-sales', task:'Message team: everyone shares/invites this week', meta:'Practitioners, partners, warm community chats'},
-      {lane:'Waiting On', id:'ticket-count-wait', task:'Latest ticket number', meta:'Waiting on Sam'},
-      {lane:'Waiting On', id:'mei-contract-wait', task:'Signed Intuition agreement', meta:'Waiting on Mei/company confirmation'}
+      {lane:'Top 3 Today', id:'create-mei-contract', task:'Create Mei / Intuition contract draft', meta:'Still verbal. Need contract, signature, $2,222, payment timing, QR/app journey, deliverables.'},
+      {lane:'Top 3 Today', id:'sam-ticket-count', task:'Ask Sam to confirm 16-ticket count', meta:'Who are the 16? Does it include founders/team/practitioners? Need real gap to 60.'},
+      {lane:'Top 3 Today', id:'practitioner-share-guide', task:'Create practitioner content/share guide', meta:'Make it easy for practitioners to post, invite friends, and share ticket link/code.'},
+
+      {lane:'Small Fixes', id:'website-matt', task:'Follow up with Matt to update website', meta:'Grand/file updated, website not updated. Need new wording, ticket CTA, Tier 2, event promise.'},
+      {lane:'Small Fixes', id:'core-wording', task:'Clean core wording across bio/site/content', meta:'A day to return to yourself, connect with one another, and leave more alive.'},
+      {lane:'Small Fixes', id:'capacity-copy', task:'Fix capacity/ticket language everywhere', meta:'111 humans capacity; 120 oversell target only if needed. Keep public copy simple.'},
+      {lane:'Small Fixes', id:'housekeeping-opening', task:'Add 20-min Paris + Sam welcome/housekeeping block', meta:'Integrate into opening ceremony: welcome, safety, schedule, bathrooms, water, consent, what to expect.'},
+
+      {lane:'Research', id:'stage-naming', task:'Finalize stage/zone naming system', meta:'Welcome Portal; Awaken The Rhythm; Awaken Your Intuition; Awaken House; Awaken Creativity.'},
+      {lane:'Research', id:'equipment-list', task:'Build clean equipment list by zone', meta:'Ask Rachel for updates; map needs by Welcome, Intuition, Rhythm, House, Creativity.'},
+      {lane:'Research', id:'opening-flow', task:'Design opening flow with Rachel/Mish/Amanda', meta:'Opening circle + housekeeping + connection arc. Need timing and ownership.'},
+
+      {lane:'Reach-outs', id:'mei-contract-followup', task:'Message Mei about contract + activation checklist', meta:'Contract not sent. Confirm app activation, branding, QR, field card/gift, deliverables.'},
+      {lane:'Reach-outs', id:'sam-followup', task:'Message Sam for ticket count + buyer list', meta:'Confirm 16 names and whether it includes team/practitioners/founders.'},
+      {lane:'Reach-outs', id:'matt-website', task:'Message Matt about website updates', meta:'Website still needs updated wording and CTA.'},
+      {lane:'Reach-outs', id:'rosa-bio-branding', task:'Message Rosa for bio + tea branding details', meta:'Need her information, offering name, setup needs, supplies, and how tea is branded.'},
+      {lane:'Reach-outs', id:'amanda-rachel-mish', task:'Connect Amanda with Rachel + Mish', meta:'Ask Rachel to reach out to Amanda so opening flow and connection piece are aligned.'},
+      {lane:'Reach-outs', id:'team-sales-daily', task:'Daily 30-min team sales message block', meta:'Continue inviting aligned people every day; team/practitioners help share.'},
+
+      {lane:'Waiting On', id:'waiting-mei', task:'Mei / Intuition contract signature', meta:'Waiting on contract creation + Mei/company signature.'},
+      {lane:'Waiting On', id:'waiting-sam-count', task:'Confirmed ticket buyer list', meta:'Waiting on Sam.'},
+      {lane:'Waiting On', id:'waiting-matt-site', task:'Website update confirmation', meta:'Waiting on Matt.'},
+      {lane:'Waiting On', id:'waiting-rachel-equipment', task:'Rachel equipment list updates', meta:'Needed for clean equipment list by zone.'},
+      {lane:'Waiting On', id:'waiting-rosa-bio', task:'Rosa bio + tea details', meta:'Needed for website/content and forest tea setup.'}
     ];
     function renderPriorityBoard(){
       const el = document.getElementById('priorityBoard');
@@ -907,13 +920,13 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
     renderBoard();
 
     const zones = [
-      ['Parking / Arrival','Park, arrive, and begin the journey with clear signs and volunteers','Transition'],
-      ['Check-in + Welcome Portal','Check in, receive orientation/map/schedule, and enter the experience','Transition'],
-      ['Vendor Village','Two vendor rows on the paved road; requires generator plan because there is no reliable power near garage/Vendor Village','Transition'],
-      ['Main Wellness Field','Opening, breathwork, cacao, yoga, workshops, movement, sound, and main community containers','Experience'],
-      ['Forest Tea + Intuition Lab','Rosa tea ceremony + Mei/Intuition app activation; replacement cozy setup needed for ~10 guests at a time','Explore'],
+      ['Welcome Portal','Park, arrive, check in, and feel immediately safe with clear signs and warm hosts','Transition'],
+      ['Check-in + Guest Care','Receive orientation, map, schedule, water reminder, and come-solo reassurance','Transition'],
+      ['Awaken Creativity','Vendor Village: curated products, food/drink, maker energy, community discovery, generator plan needed','Explore'],
+      ['Awaken The Rhythm','Main stage: opening, movement, breathwork, music, ceremony, sound, and core containers','Experience'],
+      ['Awaken Your Intuition','Forest tea + Mei/Intuition app activation; cozy setup needed for ~10 guests at a time','Explore'],
       ['Connection Lab','Amanda leads authentic relating from 3–4 PM so guests bond before the deeper breathwork container','Experience'],
-      ['Heal House Chill Zone','Rest, reflect, lounge, and try biohacking activations with confirmed power needs','Experience'],
+      ['Awaken House','Biohacking/rest zone with Heal House: PEMF, red light, foot massage, nervous-system reset','Experience'],
       ['DJ + Fire Close','Evening integration, fire, optional DJ vibe, and possible Dance Academy if sound/safety allows','Experience']
     ];
     document.getElementById('zoneStrip').innerHTML = zones.map(([name,purpose,type])=>`<div class="zone"><div><strong>${name}</strong><small>${purpose}</small></div><span class="tag">${type}</span></div>`).join('');
