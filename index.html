@@ -329,6 +329,19 @@
     .revenue-chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-start;margin-top:16px}.revenue-chips .profit-chip{margin-top:12px}
     .footer{padding:36px 0 10px;color:var(--muted);font-size:13px}
 
+
+    .priority-board{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+    .priority-lane{border:1px solid var(--line);border-radius:24px;background:rgba(255,247,236,.58);padding:14px;min-height:260px}
+    .priority-lane h3{font-size:16px;margin:4px 4px 12px;color:var(--forest)}
+    .task-card{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.56);padding:12px;margin-bottom:10px}
+    .task-card input{width:18px;height:18px;accent-color:var(--forest);margin-top:2px}
+    .task-card b{display:block;font-size:13px;line-height:1.28;color:#263226}
+    .task-card small{display:block;color:var(--muted);font-size:11px;line-height:1.35;margin-top:4px}
+    .daily-ritual{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:20px}
+    .ritual-card{border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.45);padding:16px}
+    .ritual-card b{display:block;color:var(--forest);font-size:15px;margin-bottom:6px}
+    .ritual-card span{display:block;color:var(--muted);font-size:13px;line-height:1.42}
+
     .collapse-wrap{max-width:var(--max);margin:22px auto;padding:0 var(--space)}
     .collapse-wrap > summary{list-style:none;cursor:pointer;border:1px solid var(--line);border-radius:24px;background:rgba(255,247,236,.86);box-shadow:var(--shadow);padding:18px 22px;font-weight:900;color:var(--forest);display:flex;justify-content:space-between;align-items:center;gap:16px}
     .collapse-wrap > summary::-webkit-details-marker{display:none}
@@ -337,7 +350,7 @@
     .collapse-wrap section.wrap{padding-left:0;padding-right:0}
 
     @media (max-width: 980px){
-      .nav-links{display:none}.menu-toggle{display:inline-flex}.logo{font-size:14px}.hero-center{padding-top:124px}.eyebrow{letter-spacing:.28em}.deadline-card{grid-template-columns:1fr;border-radius:28px}.countdown-wrap{grid-template-columns:repeat(3,1fr)}.deadline-card .date{width:100%;min-height:70px}.time-block{min-height:76px}.grid,.cols-2,.cols-3,.sidebar{grid-template-columns:1fr}.strip-card{grid-template-columns:1fr}.snapshot-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.ux-summary{grid-template-columns:1fr}.project-grid,.project-summary,.project-footer{grid-template-columns:1fr}.project-lanes{grid-template-columns:1fr}.reel-top{flex-direction:column}.board{grid-template-columns:repeat(5,84vw);overflow:auto;gap:14px}.zones{grid-template-columns:repeat(6,74vw)}.metrics{grid-template-columns:1fr}.action{grid-template-columns:auto minmax(0,1fr);grid-template-areas:'num body' 'num meta' 'done done'}.done-wrap{justify-self:start}.milestone{grid-template-columns:1fr}.sales-loop{grid-template-columns:1fr}.control-item{grid-template-columns:1fr;gap:4px}.hero-details{grid-template-columns:1fr}.mix-row{grid-template-columns:1fr;gap:6px}.owner-grid{grid-template-columns:1fr}.mission-grid{grid-template-columns:1fr}.weekly-mix{grid-template-columns:repeat(2,1fr)}.inventory-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.inventory-card{grid-template-columns:1fr}.inv-controls{justify-content:flex-start}main{padding:54px 0 116px}section{margin-bottom:88px;scroll-margin-top:150px}main > section.wrap{padding-top:34px}#today{padding-top:8px}main > section.wrap + section.wrap{margin-top:22px}.section-head{margin-bottom:34px}
+      .nav-links{display:none}.menu-toggle{display:inline-flex}.logo{font-size:14px}.hero-center{padding-top:124px}.eyebrow{letter-spacing:.28em}.deadline-card{grid-template-columns:1fr;border-radius:28px}.countdown-wrap{grid-template-columns:repeat(3,1fr)}.deadline-card .date{width:100%;min-height:70px}.time-block{min-height:76px}.grid,.cols-2,.cols-3,.sidebar{grid-template-columns:1fr}.strip-card{grid-template-columns:1fr}.snapshot-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.ux-summary{grid-template-columns:1fr}.project-grid,.project-summary,.project-footer{grid-template-columns:1fr}.project-lanes{grid-template-columns:1fr}.reel-top{flex-direction:column}.board{grid-template-columns:repeat(5,84vw);overflow:auto;gap:14px}.zones{grid-template-columns:repeat(6,74vw)}.metrics{grid-template-columns:1fr}.action{grid-template-columns:auto minmax(0,1fr);grid-template-areas:'num body' 'num meta' 'done done'}.done-wrap{justify-self:start}.milestone{grid-template-columns:1fr}.sales-loop{grid-template-columns:1fr}.control-item{grid-template-columns:1fr;gap:4px}.hero-details{grid-template-columns:1fr}.mix-row{grid-template-columns:1fr;gap:6px}.owner-grid{grid-template-columns:1fr}.mission-grid{grid-template-columns:1fr}.weekly-mix{grid-template-columns:repeat(2,1fr)}.priority-board,.daily-ritual{grid-template-columns:1fr}.inventory-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.inventory-card{grid-template-columns:1fr}.inv-controls{justify-content:flex-start}main{padding:54px 0 116px}section{margin-bottom:88px;scroll-margin-top:150px}main > section.wrap{padding-top:34px}#today{padding-top:8px}main > section.wrap + section.wrap{margin-top:22px}.section-head{margin-bottom:34px}
     }
   </style>
 </head>
@@ -346,13 +359,13 @@
     <div class="nav-inner">
       <a class="logo" href="#top">AWTR HQ</a>
       <nav class="nav-links" id="desktopNav">
-        <a href="#today">Today</a><a href="#sales">Sales</a><a href="#human-design">Human Arc</a><a href="#money">Money</a><a href="#people">People</a><a href="#milestones">Owners</a>
+        <a href="#today">Today</a><a href="#daily-tracker">Tracker</a><a href="#sales">Sales</a><a href="#human-design">Human Arc</a><a href="#money">Money</a><a href="#people">People</a><a href="#milestones">Owners</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
     </div>
   </header>
   <nav class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
-    <a href="#today">Today</a><a href="#sales">Sales</a><a href="#human-design">Human Arc</a><a href="#money">Money</a><a href="#people">People</a><a href="#zones">Flow</a><a href="#decisions">Decisions</a><a href="#milestones">Owners</a>
+    <a href="#today">Today</a><a href="#daily-tracker">Tracker</a><a href="#sales">Sales</a><a href="#human-design">Human Arc</a><a href="#money">Money</a><a href="#people">People</a><a href="#zones">Flow</a><a href="#decisions">Decisions</a><a href="#milestones">Owners</a>
   </nav>
 
   <section class="hero" id="top">
@@ -425,6 +438,16 @@
           <p style="margin-top:16px"><b>Giving back:</b> 10% of profits will be donated to <a href="https://jeantweed.com/" target="_blank" rel="noopener" style="color:var(--paper);text-decoration:underline">The Jean Tweed Centre</a>.</p>
         </div>
       </div>
+    </section>
+
+    <section id="daily-tracker" class="wrap">
+      <div class="section-head"><div><div class="label">Daily execution tracker</div><h2>Catch every small task without losing the priorities</h2><p>This is the day-to-day control board for tiny fixes, research, reach-outs, waiting-on items, and urgent actions. Checkboxes save in this browser.</p></div></div>
+      <div class="daily-ritual">
+        <div class="ritual-card"><b>Morning sort — 10 min</b><span>Pick today’s Top 3, then move everything else into a lane: Small Fix, Research, Reach-out, or Waiting On.</span></div>
+        <div class="ritual-card"><b>Midday push — 30 min</b><span>Batch DMs, practitioner asks, Mei follow-up, and ticket nudges. Do not scatter them throughout the day.</span></div>
+        <div class="ritual-card"><b>Evening close — 10 min</b><span>Mark done, capture blockers, and choose tomorrow’s first action before ending the day.</span></div>
+      </div>
+      <div class="priority-board" id="priorityBoard"></div>
     </section>
 
     <details class="collapse-wrap"><summary>Hospitality / nervous-system safety</summary>
@@ -816,6 +839,35 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
       });
     }
     renderTodayActions();
+
+    const dailyTasks = [
+      {lane:'Top 3 Today', id:'mei-contract-daily', task:'Finalize Mei / Intuition next step', meta:'Contract, activation, payment timing, QR/app journey'},
+      {lane:'Top 3 Today', id:'ticket-dms', task:'Send warm ticket DMs', meta:'Batch outreach; push toward 60 by July 4'},
+      {lane:'Top 3 Today', id:'share-kit', task:'Send practitioner share kit', meta:'Ask practitioners to invite friends + post once'},
+      {lane:'Small Fixes', id:'capacity-copy', task:'Fix capacity language where needed', meta:'111 humans / 120 oversell target — keep clear'},
+      {lane:'Small Fixes', id:'bio-check', task:'Check IG bio + website CTA consistency', meta:'DM AWAKEN / ticket link / Tier 2 closes July 4'},
+      {lane:'Research', id:'neuro-content', task:'Turn neuroscience notes into 1 teaching post', meta:'Belonging is biological; social connection is reward'},
+      {lane:'Research', id:'event-design-examples', task:'Collect 3 examples of connection moments', meta:'Arrival ritual, name prompts, closing integration'},
+      {lane:'Reach-outs', id:'sam-count', task:'Ask Sam for latest ticket count', meta:'Needed to calculate real gap to 60'},
+      {lane:'Reach-outs', id:'mei-followup', task:'Message Mei about contract + activation checklist', meta:'Key sponsorship + forest activation'},
+      {lane:'Reach-outs', id:'team-sales', task:'Message team: everyone shares/invites this week', meta:'Practitioners, partners, warm community chats'},
+      {lane:'Waiting On', id:'ticket-count-wait', task:'Latest ticket number', meta:'Waiting on Sam'},
+      {lane:'Waiting On', id:'mei-contract-wait', task:'Signed Intuition agreement', meta:'Waiting on Mei/company confirmation'}
+    ];
+    function renderPriorityBoard(){
+      const el = document.getElementById('priorityBoard');
+      if(!el) return;
+      const lanes = ['Top 3 Today','Small Fixes','Research','Reach-outs','Waiting On'];
+      el.innerHTML = lanes.map(lane => {
+        const items = dailyTasks.filter(t => t.lane === lane);
+        return `<div class="priority-lane"><h3>${lane}</h3>${items.map(t => {
+          const checked = localStorage.getItem('awtr-daily-' + t.id) === 'done';
+          return `<label class="task-card"><input type="checkbox" data-daily-id="${t.id}" ${checked ? 'checked' : ''}><span><b>${t.task}</b><small>${t.meta}</small></span></label>`;
+        }).join('')}</div>`;
+      }).join('');
+      el.querySelectorAll('input').forEach(box => box.addEventListener('change', () => { localStorage.setItem('awtr-daily-' + box.dataset.dailyId, box.checked ? 'done' : 'open'); }));
+    }
+    renderPriorityBoard();
 
     const people = [
       {name:'Rosa', lane:'Confirmed', role:'Tea ceremony / forest tea experience', need:'Confirm tea flow, timing, supplies, hot water, cups, seating, helper, rain backup, and content moment', tags:['confirmed','setup']},
