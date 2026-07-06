@@ -342,6 +342,22 @@
     .ritual-card b{display:block;color:var(--forest);font-size:15px;margin-bottom:6px}
     .ritual-card span{display:block;color:var(--muted);font-size:13px;line-height:1.42}
 
+
+
+    .volunteer-map{display:grid;gap:22px}
+    .volunteer-command{display:grid;grid-template-columns:minmax(260px,.85fr) minmax(0,1.15fr);gap:18px;align-items:stretch}
+    .volunteer-lead{position:relative;overflow:hidden;background:linear-gradient(145deg,var(--forest),#254d37);color:var(--paper);border-color:rgba(255,255,255,.12)}
+    .volunteer-lead::after{content:"";position:absolute;inset:auto -30% -42% 28%;height:210px;background:radial-gradient(circle,rgba(214,168,90,.28),transparent 62%)}
+    .volunteer-lead h3{position:relative;z-index:1;font-size:30px}.volunteer-lead p,.volunteer-lead li{position:relative;z-index:1;color:rgba(255,247,236,.86)}
+    .volunteer-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:stretch}
+    .flow-node{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.52);padding:15px;min-height:132px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+    .flow-node:not(:last-child)::after{content:"→";position:absolute;right:-13px;top:50%;transform:translateY(-50%);font-weight:950;color:var(--clay);z-index:2;background:#f4e8d8;border:1px solid var(--line);border-radius:999px;width:24px;height:24px;display:grid;place-items:center;font-size:13px}
+    .flow-node b{display:block;color:var(--forest);line-height:1.2}.flow-node span{display:block;color:var(--muted);font-size:12px;line-height:1.35;margin-top:8px}
+    .volunteer-teams{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .team-card{border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.48);padding:18px;min-height:210px}.team-card h3{font-size:20px;margin:0 0 10px;color:var(--forest)}.team-card p{font-size:13px;margin-bottom:12px}.team-card ul{font-size:13px;line-height:1.45}
+    .coverage-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.coverage-tile{border:1px solid var(--line);border-radius:22px;background:rgba(255,247,236,.72);padding:18px}.coverage-tile b{display:block;font-size:28px;line-height:1;color:var(--forest);letter-spacing:-.03em}.coverage-tile span{display:block;margin-top:8px;font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:900;color:var(--muted)}
+    .message-block{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.message-card{border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.5);padding:20px}.message-card h3{margin:0 0 8px;color:var(--forest)}.message-card p{font-size:14px}
+
     .collapse-wrap{max-width:var(--max);margin:22px auto;padding:0 var(--space)}
     .collapse-wrap > summary{list-style:none;cursor:pointer;border:1px solid var(--line);border-radius:24px;background:rgba(255,247,236,.86);box-shadow:var(--shadow);padding:18px 22px;font-weight:900;color:var(--forest);display:flex;justify-content:space-between;align-items:center;gap:16px}
     .collapse-wrap > summary::-webkit-details-marker{display:none}
@@ -350,7 +366,7 @@
     .collapse-wrap section.wrap{padding-left:0;padding-right:0}
 
     @media (max-width: 980px){
-      .nav-links{display:none}.menu-toggle{display:inline-flex}.logo{font-size:14px}.hero-center{padding-top:124px}.eyebrow{letter-spacing:.28em}.deadline-card{grid-template-columns:1fr;border-radius:28px}.countdown-wrap{grid-template-columns:repeat(3,1fr)}.deadline-card .date{width:100%;min-height:70px}.time-block{min-height:76px}.grid,.cols-2,.cols-3,.sidebar{grid-template-columns:1fr}.strip-card{grid-template-columns:1fr}.snapshot-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.ux-summary{grid-template-columns:1fr}.project-grid,.project-summary,.project-footer{grid-template-columns:1fr}.project-lanes{grid-template-columns:1fr}.reel-top{flex-direction:column}.board{grid-template-columns:repeat(5,84vw);overflow:auto;gap:14px}.zones{grid-template-columns:repeat(6,74vw)}.metrics{grid-template-columns:1fr}.action{grid-template-columns:auto minmax(0,1fr);grid-template-areas:'num body' 'num meta' 'done done'}.done-wrap{justify-self:start}.milestone{grid-template-columns:1fr}.sales-loop{grid-template-columns:1fr}.control-item{grid-template-columns:1fr;gap:4px}.hero-details{grid-template-columns:1fr}.mix-row{grid-template-columns:1fr;gap:6px}.owner-grid{grid-template-columns:1fr}.mission-grid{grid-template-columns:1fr}.weekly-mix{grid-template-columns:repeat(2,1fr)}.priority-board,.daily-ritual{grid-template-columns:1fr}.inventory-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.inventory-card{grid-template-columns:1fr}.inv-controls{justify-content:flex-start}main{padding:54px 0 116px}section{margin-bottom:88px;scroll-margin-top:150px}main > section.wrap{padding-top:34px}#today{padding-top:8px}main > section.wrap + section.wrap{margin-top:22px}.section-head{margin-bottom:34px}
+      .nav-links{display:none}.menu-toggle{display:inline-flex}.logo{font-size:14px}.hero-center{padding-top:124px}.eyebrow{letter-spacing:.28em}.deadline-card{grid-template-columns:1fr;border-radius:28px}.countdown-wrap{grid-template-columns:repeat(3,1fr)}.deadline-card .date{width:100%;min-height:70px}.time-block{min-height:76px}.grid,.cols-2,.cols-3,.sidebar{grid-template-columns:1fr}.strip-card{grid-template-columns:1fr}.snapshot-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.ux-summary{grid-template-columns:1fr}.project-grid,.project-summary,.project-footer{grid-template-columns:1fr}.project-lanes{grid-template-columns:1fr}.reel-top{flex-direction:column}.board{grid-template-columns:repeat(5,84vw);overflow:auto;gap:14px}.zones{grid-template-columns:repeat(6,74vw)}.volunteer-flow{grid-template-columns:1fr}.flow-node:not(:last-child)::after{content:"↓";right:50%;top:auto;bottom:-13px;transform:translateX(50%)}.metrics{grid-template-columns:1fr}.action{grid-template-columns:auto minmax(0,1fr);grid-template-areas:'num body' 'num meta' 'done done'}.done-wrap{justify-self:start}.milestone{grid-template-columns:1fr}.sales-loop{grid-template-columns:1fr}.control-item{grid-template-columns:1fr;gap:4px}.hero-details{grid-template-columns:1fr}.mix-row{grid-template-columns:1fr;gap:6px}.owner-grid{grid-template-columns:1fr}.mission-grid{grid-template-columns:1fr}.weekly-mix{grid-template-columns:repeat(2,1fr)}.priority-board,.daily-ritual,.volunteer-command,.volunteer-teams,.coverage-grid,.message-block{grid-template-columns:1fr}.inventory-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.inventory-card{grid-template-columns:1fr}.inv-controls{justify-content:flex-start}main{padding:54px 0 116px}section{margin-bottom:88px;scroll-margin-top:150px}main > section.wrap{padding-top:34px}#today{padding-top:8px}main > section.wrap + section.wrap{margin-top:22px}.section-head{margin-bottom:34px}
     }
   </style>
 </head>
@@ -359,13 +375,13 @@
     <div class="nav-inner">
       <a class="logo" href="#top">AWTR HQ</a>
       <nav class="nav-links" id="desktopNav">
-        <a href="#today">Today</a><a href="#daily-tracker">Tracker</a><a href="#sales">Sales</a><a href="#human-design">Human Arc</a><a href="#money">Money</a><a href="#people">People</a><a href="#milestones">Owners</a>
+        <a href="#today">Today</a><a href="#daily-tracker">Tracker</a><a href="#sales">Sales</a><a href="#human-design">Human Arc</a><a href="#money">Money</a><a href="#people">People</a><a href="#volunteers">Volunteers</a><a href="#milestones">Owners</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
     </div>
   </header>
   <nav class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
-    <a href="#today">Today</a><a href="#daily-tracker">Tracker</a><a href="#sales">Sales</a><a href="#human-design">Human Arc</a><a href="#money">Money</a><a href="#people">People</a><a href="#zones">Flow</a><a href="#decisions">Decisions</a><a href="#milestones">Owners</a>
+    <a href="#today">Today</a><a href="#daily-tracker">Tracker</a><a href="#sales">Sales</a><a href="#human-design">Human Arc</a><a href="#money">Money</a><a href="#people">People</a><a href="#volunteers">Volunteers</a><a href="#zones">Flow</a><a href="#decisions">Decisions</a><a href="#milestones">Owners</a>
   </nav>
 
   <section class="hero" id="top">
@@ -672,6 +688,60 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
       <div class="section-head"><div><div class="label">People + setup</div><h2>Practitioners & vendors</h2><p>Filter by what you need: confirmed, pending, payment, setup, or founder decision.</p></div></div>
       <div class="filters"><button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="confirmed">Confirmed</button><button class="filter-btn" data-filter="pending">Pending</button><button class="filter-btn" data-filter="payment">Payment</button><button class="filter-btn" data-filter="setup">Setup</button><button class="filter-btn" data-filter="decision">Decision</button></div>
       <div class="board" id="peopleBoard"></div>
+    </section>
+
+
+
+    <section id="volunteers" class="wrap">
+      <div class="section-head"><div><div class="label">Volunteer system</div><h2>Volunteer role map</h2><p>For 111 guests, volunteers should feel like part of the Awaken field while supporting the actual guest journey: arrival, welcome, movement, zones, comfort, and closing.</p></div></div>
+      <div class="volunteer-map">
+        <div class="volunteer-command">
+          <div class="card volunteer-lead">
+            <span class="status dark"><span class="dot"></span>Central command</span>
+            <h3>Volunteer Flow Lead / Info Hub</h3>
+            <p>The center for questions, volunteer check-ins, small issues, and role updates. This protects Paris, Sam, and Rachel from becoming the default problem-solving center.</p>
+            <ul class="clean-list" style="margin-top:16px">
+              <li>Holds printed run sheet, map, contact list, and role assignments.</li>
+              <li>Redirects volunteers and answers simple questions.</li>
+              <li>Escalates only important issues to the core team.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="status green"><span class="dot"></span>Guest journey</span>
+            <h3>How volunteer support follows the guest</h3>
+            <div class="volunteer-flow" aria-label="Volunteer guest-flow map">
+              <div class="flow-node"><b>1. Arrival</b><span>Parking, drop-off, driveway flow, first calm cue.</span></div>
+              <div class="flow-node"><b>2. Welcome</b><span>Check-in, wristband/info card, “you’re in the right place.”</span></div>
+              <div class="flow-node"><b>3. Wayfinding</b><span>Human signposts between zones, washrooms, water, forest, vendors.</span></div>
+              <div class="flow-node"><b>4. Zone support</b><span>Biohacking, vendors, food/drink, practitioners, forest moments.</span></div>
+              <div class="flow-node"><b>5. Site care</b><span>Water, cleanliness, comfort, teardown, graceful close.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="coverage-grid">
+          <div class="coverage-tile"><b>12–16</b><span>Ideal volunteers</span></div>
+          <div class="coverage-tile"><b>10–12</b><span>Minimum coverage</span></div>
+          <div class="coverage-tile"><b>5</b><span>Priority functions</span></div>
+          <div class="coverage-tile"><b>1</b><span>Strong flow lead</span></div>
+        </div>
+
+        <div class="volunteer-teams">
+          <article class="team-card"><span class="status green"><span class="dot"></span>Arrival</span><h3>Arrival Team</h3><p>Creates the first emotional impression.</p><ul class="clean-list"><li>2 parking / arrival flow</li><li>2 check-in / welcome</li><li>Peak coverage before opening</li></ul></article>
+          <article class="team-card"><span class="status gold"><span class="dot"></span>Movement</span><h3>Guest Flow Team</h3><p>Keeps the day easy to navigate.</p><ul class="clean-list"><li>1–2 wayfinding guides</li><li>Transition support</li><li>Questions + gentle direction</li></ul></article>
+          <article class="team-card"><span class="status red"><span class="dot"></span>Experience</span><h3>Zone Support Team</h3><p>Supports the areas delivering the magic.</p><ul class="clean-list"><li>Biohacking booth support</li><li>Catering / food + drink</li><li>Vendor / practitioner runner</li></ul></article>
+          <article class="team-card"><span class="status green"><span class="dot"></span>Care</span><h3>Site Care Team</h3><p>Keeps the land beautiful and safe.</p><ul class="clean-list"><li>Water / hydration lead</li><li>Cleanliness + garbage checks</li><li>Washroom + comfort checks</li></ul></article>
+          <article class="team-card"><span class="status gold"><span class="dot"></span>Build + close</span><h3>Setup / Tear Down</h3><p>Makes sure the core team is not carrying the land alone.</p><ul class="clean-list"><li>3–5 setup crew</li><li>3–5 teardown crew</li><li>Confirm who can stay late</li></ul></article>
+          <article class="team-card"><span class="status green"><span class="dot"></span>Story</span><h3>Media Crew</h3><p>Captures the feeling without disrupting sacred moments.</p><ul class="clean-list"><li>2–3 media support</li><li>BTS, arrivals, vendors, nature</li><li>Consent boundaries required</li></ul></article>
+          <article class="team-card"><span class="status red"><span class="dot"></span>Safety</span><h3>Safety / Wellness Support</h3><p>Protects comfort, hydration, and nervous-system safety.</p><ul class="clean-list"><li>First aid kit + emergency info</li><li>Heat, ticks, overwhelm support</li><li>Escalation protocol</li></ul></article>
+          <article class="team-card"><span class="status gold"><span class="dot"></span>Preference-first</span><h3>Assignment Method</h3><p>Ask preferences first, then assign based on guest-flow needs.</p><ul class="clean-list"><li>Availability</li><li>Top 3 preferred roles</li><li>Roles they prefer not to do</li><li>Relevant skills</li></ul></article>
+        </div>
+
+        <div class="message-block">
+          <div class="message-card"><h3>Core team message goal</h3><p>Inform the team which volunteer lanes need coverage, why they matter for 111 guests, and which roles must be secured first: Flow Lead, Check-in, Parking, Wayfinding, Catering/Water, Safety, Setup + Tear Down.</p></div>
+          <div class="message-card"><h3>Volunteer message goal</h3><p>Make volunteers feel appreciated and part of the community. The tone is: “You are helping us hold the energy of the space,” not “you are working an event.”</p></div>
+        </div>
+      </div>
     </section>
 
     <details class="collapse-wrap"><summary>Content shoot / shot list</summary>
@@ -1044,6 +1114,18 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
         waiting:'Volunteer names, printed signs/map, final parking count, rain plan, generator placement.', next:'Create the parking/check-in/vendor-map supply list and volunteer briefing.'
       },
       {
+        id:'volunteers', outcome:'Volunteers feel clear, appreciated, and useful', owner:'Paris + Volunteer Flow Lead', focus:'Volunteer System / Role Map', support:'Sam + Rachel + core team',
+        done:'Volunteer preferences are collected, roles are assigned around the 111-person guest journey, and every volunteer knows their lane, shift, point person, and support expectations.',
+        actions:[
+          ['Send core team note with volunteer role map, priorities, and coverage needs','Paris'],
+          ['Send volunteer preference message: availability, top 3 roles, no-go roles, relevant experience, support needs','Paris'],
+          ['Name the Volunteer Flow Lead / Info Hub and give them the printed run sheet, map, contact list, and escalation rules','Paris + Sam'],
+          ['Assign minimum coverage: parking, check-in, wayfinding, catering/water, cleanliness, safety/wellness, setup, teardown','Volunteer Flow Lead'],
+          ['Create 15-minute volunteer huddle: welcome, energy of the day, roles, boundaries, breaks, escalation','Volunteer Flow Lead + Rachel']
+        ],
+        waiting:'Volunteer replies, confirmed availability, named Flow Lead, shift times, food/breaks/thank-you details.', next:'Send the preference message, collect replies, then assign roles based on guest-flow needs — not preference alone.'
+      },
+      {
         id:'programming', outcome:'Programming feels intentional, not crowded', owner:'Paris + Rachel', focus:'Ceremony / Practitioners / Flow', support:'Sam + practitioners',
         done:'Every practitioner knows when they are on, where they go, what they need, and how their piece supports the guest emotional arc.',
         actions:[
@@ -1112,7 +1194,7 @@ The goal is to make the day feel beautiful, grounded, and well-supported — wit
       projectBoard.forEach(project => project.actions.forEach((_,i)=>{ total++; if(localStorage.getItem(`awtr-project-${project.id}-${i}`)==='done') done++; }));
       const overall = total ? Math.round(done/total*100) : 0;
       summary.innerHTML = [
-        ['9','Outcome lanes'],
+        ['10','Outcome lanes'],
         [`${done}/${total}`,'Actions completed'],
         [`${overall}%`,'Overall progress'],
         ['Paris + Sam','Co-founder command']
